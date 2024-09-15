@@ -24,7 +24,7 @@
             <div class="rd-navbar-inner">
               <div class="rd-navbar-panel">
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                <div class="rd-navbar-brand"><a class="brand-name" href="index.html">
+                <div class="rd-navbar-brand"><a class="brand-name" href="index.php">
                     <div class="brand-mobile"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/>
                     </div>
                     <div class="brand-desktop"><img src="img/logo-big-dark-125x125.png" alt="" width="125" height="125"/>
@@ -33,119 +33,15 @@
               <div class="rd-navbar-nav-wrap">
                 <div class="rd-navbar-nav-inner">
                   <ul class="rd-navbar-nav">
-                    <li class="active"><a href="index.html">Home</a>
-                      <ul class="rd-navbar-megamenu">
-                        <li>
-                          <p class="rd-megamenu-header"><a href="index.html">Home</a></p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="home-variant-2.html">Home variant 2</a></li>
-                            <li><a href="home-variant-3.html">Home variant 3</a></li>
-                          </ul>
-                          <p class="rd-megamenu-header"><a href="about.html">About</a></p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="barbers.html">barbers</a></li>
-                            <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                          </ul>
-                          <p class="rd-megamenu-header">Contact Us</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="contacts-1.html">Contacts 1</a></li>
-                            <li><a href="contacts-2.html">Contacts 2</a></li>
-                          </ul>
-                          <p class="rd-megamenu-header"><a href="services.html">Services</a></p>
-                        </li>
-                        <li>
-                          <p class="rd-megamenu-header">Book</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="step-1.html">Step 1</a></li>
-                            <li><a href="step-2.html">Step 2</a></li>
-                            <li><a href="step-3.html">Step 3</a></li>
-                            <li><a href="step-4.html">Step 4</a></li>
-                            <li><a href="finish.html">Finish</a></li>
-                          </ul>
-                          <p class="rd-megamenu-header">Blog</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="single-post.html">Single post</a></li>
-                          </ul>
-                          <p class="rd-megamenu-header"><a href="shop.html">Shop</a></p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="single-product.html">Single product</a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <p class="rd-megamenu-header">Pages</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="404-page.html">404 page</a></li>
-                            <li><a href="503-page.html">503 page</a></li>
-                            <li><a href="maintenance.html">Maintenance</a></li>
-                            <li><a href="coming-soon.html">Coming soon</a></li>
-                            <li><a href="privacy-policy.html">Privacy policy</a></li>
-                          </ul>
-                          <p class="rd-megamenu-header">Layouts</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="header-perspective.html">Header perspective</a></li>
-                            <li><a href="header-transparent.html">Header transparent</a></li>
-                            <li><a href="header-fullwidth.html">Header fullwidth</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <p class="rd-megamenu-header">Layouts</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="footer-default.html">Footer default</a></li>
-                            <li><a href="footer-variant-2.html">Footer variant 2</a></li>
-                            <li><a href="footer-variant-3.html">Footer variant 3</a></li>
-                          </ul>
-                          <p class="rd-megamenu-header">Additional</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="buttons.html">Buttons</a></li>
-                            <li><a href="forms.html">Forms</a></li>
-                            <li><a href="grid.html">Grid</a></li>
-                            <li><a href="progress-bars.html">Progress Bars</a></li>
-                            <li><a href="tables.html">Tables</a></li>
-                            <li><a href="tabs-and-accordions.html">Tabs and Accordions</a></li>
-                            <li><a href="typography.html">Typography</a></li>
-                          </ul>
-                        </li>
-                      </ul>
+                    <li class="active"><a href="index.php">Home</a>
                     </li>
-                    <li><a href="about.html">About</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="barbers.html">barbers</a>
-                        </li>
-                        <li><a href="testimonials.html">Testimonials</a>
-                        </li>
-                        <li><a href="faq.html">FAQ</a>
-                        </li>
-                      </ul>
+                    <li><a href="sobre.php">Sobre</a>
                     </li>
-                    <li><a href="services.html">Services</a>
+                    <li><a href="servico.php">serviços</a>
                     </li>
-                    <li><a href="blog.html">Blog</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="single-post.html">Single post</a>
-                        </li>
-                      </ul>
+                    <li><a href="shop.php">Shop</a>
                     </li>
-                    <li><a href="shop.html">Shop</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="single-product.html">Single product</a>
-                        </li>
-                        <li><a href="cart.html">Cart</a>
-                        </li>
-                        <li><a href="checkout.html">Checkout</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Contacts</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="contacts-1.html">Contacts 1</a>
-                        </li>
-                        <li><a href="contacts-2.html">Contacts 2</a>
-                        </li>
-                      </ul>
+                    <li><a href="#">Agendamento</a>
                     </li>
                   </ul>
                 </div>
@@ -160,7 +56,7 @@
             <div class="range range-sm-center">
               <div class="cell-sm-9 cell-md-8 cell-lg-7">
                 <h1>Enjoy our barber services</h1>
-                <p class="large"> Establish your new amazing look with Barbershop services! From haircuts to hot shaves, you can experience the best level of barbering in the area.</p><a class="btn btn-style-1 btn-primary" href="step-1.html">BOOK NOW</a>
+                <p class="large"> Establish your new amazing look with Barbershop services! From haircuts to hot shaves, you can experience the best level of barbering in the area.</p><a class="btn btn-style-1 btn-primary" href="step-1.php">BOOK NOW</a>
               </div>
             </div>
           </div>
@@ -175,7 +71,7 @@
                 <h2>WHO WE ARE</h2>
                 <div class="p text-width-smallest">
                   <p class="big">Barbershop is a team of highly qualified barbers dedicated to offering the best value. We do this by providing high quality salon services for men and boys, in a warm, friendly atmosphere.</p>
-                </div><a class="btn btn-sm btn-style-1 btn-primary" href="about.html">Read more</a>
+                </div><a class="btn btn-sm btn-style-1 btn-primary" href="about.php">Read more</a>
               </div>
             </div>
             <div class="cell-md-7 cell-lg-6">
@@ -204,7 +100,7 @@
             <div class="cell-md-6 cell-md-6-mod-1 image-wrap-left bg-white bg-image" style="background-image: url(img/home-three-2-910x800.jpg);">
               <div class="image-wrap-inner">
                 <h2>OUR<br>SERVICES</h2>
-                <p class="big">Barbershop offers world-class men's haircuts, beard grooming, and hot razor shaves. Here are just some of the services we are famous for.</p><a class="btn btn-style-1 btn-primary" href="services.html">read more</a>
+                <p class="big">Barbershop offers world-class men's haircuts, beard grooming, and hot razor shaves. Here are just some of the services we are famous for.</p><a class="btn btn-style-1 btn-primary" href="services.php">read more</a>
               </div>
             </div>
             <div class="cell-md-6 cell-md-6-mod-2 image-wrap-right bg-gray-dark bg-image" style="background-image: url(img/home-three-3-1011x800.jpg);">
@@ -214,7 +110,7 @@
                     <article class="box-icon">
                       <figure class="box-icon-image"><img src="img/icon-service-light-3-70x62.png" alt="" width="70" height="62"/>
                       </figure>
-                      <p class="box-icon-header"><a class="link-underlined" href="services.html">BEARD trim</a></p>
+                      <p class="box-icon-header"><a class="link-underlined" href="services.php">BEARD trim</a></p>
                       <p class="box-icon-text">Well-trimmed beard is a must-have element of every men’s image</p>
                     </article>
                   </div>
@@ -222,7 +118,7 @@
                     <article class="box-icon">
                       <figure class="box-icon-image"><img src="img/icon-service-light-4-70x62.png" alt="" width="70" height="62"/>
                       </figure>
-                      <p class="box-icon-header"><a class="link-underlined" href="services.html">Mustache TRIM</a></p>
+                      <p class="box-icon-header"><a class="link-underlined" href="services.php">Mustache TRIM</a></p>
                       <p class="box-icon-text">Mustaches also need to be trimmed regularly</p>
                     </article>
                   </div>
@@ -230,7 +126,7 @@
                     <article class="box-icon">
                       <figure class="box-icon-image"><img src="img/icon-service-light-1-70x62.png" alt="" width="70" height="62"/>
                       </figure>
-                      <p class="box-icon-header"><a class="link-underlined" href="services.html">TRADITIONAL HAIRCUTS</a></p>
+                      <p class="box-icon-header"><a class="link-underlined" href="services.php">TRADITIONAL HAIRCUTS</a></p>
                       <p class="box-icon-text">One of the most popular services our barbers provide</p>
                     </article>
                   </div>
@@ -238,7 +134,7 @@
                     <article class="box-icon">
                       <figure class="box-icon-image"><img src="img/icon-service-light-2-70x62.png" alt="" width="70" height="62"/>
                       </figure>
-                      <p class="box-icon-header"><a class="link-underlined" href="services.html">SHAVES</a></p>
+                      <p class="box-icon-header"><a class="link-underlined" href="services.php">SHAVES</a></p>
                       <p class="box-icon-text">Our shaving services will make you look really handsome</p>
                     </article>
                   </div>
@@ -370,7 +266,7 @@
                 </div>
               </div>
             </div>
-            <div class="cell-xs-12"><a class="btn btn-sm btn-style-1 btn-primary" href="barbers.html">VIEW all team</a></div>
+            <div class="cell-xs-12"><a class="btn btn-sm btn-style-1 btn-primary" href="barbers.php">VIEW all team</a></div>
           </div>
         </div>
       </section>
@@ -390,12 +286,12 @@
                   <div class="slick-slide-inner">
                     <article class="post-classic"><img class="post-classic-image" src="img/blog-1-770x330.jpg" alt="" width="770" height="330"/>
                       <div class="post-classic-body">
-                        <p class="post-classic-title"><a href="single-post.html">Visiting a Barber</a></p>
+                        <p class="post-classic-title"><a href="single-post.php">Visiting a Barber</a></p>
                         <div class="post-classic-text">
                           <p>A barber knows how to cut men’s hair. If you’re like most men these days, you’re probably going to some unisex chain salon. Most of the time, you’d walk out of these places with an average haircut. Sometimes...</p>
                         </div>
                         <div class="post-classic-footer">
-                          <div class="post-classic-footer-left"><a class="btn btn-xs btn-primary btn-circle" href="single-post.html">READ MORE</a></div>
+                          <div class="post-classic-footer-left"><a class="btn btn-xs btn-primary btn-circle" href="single-post.php">READ MORE</a></div>
                           <div class="post-classic-footer-right">
                             <ul class="post-classic-meta">
                               <li><span class="icon icon-xxs icon-primary fa fa-heart"></span><span>24</span></li>
@@ -414,12 +310,12 @@
                   <div class="slick-slide-inner">
                     <article class="post-classic"><img class="post-classic-image" src="img/blog-2-770x330.jpg" alt="" width="770" height="330"/>
                       <div class="post-classic-body">
-                        <p class="post-classic-title"><a href="single-post.html">What Haircut Suits You</a></p>
+                        <p class="post-classic-title"><a href="single-post.php">What Haircut Suits You</a></p>
                         <div class="post-classic-text">
                           <p>Different people have different face shapes. And not you, but your face shape decides will this haircut suit you or not. The Barbershop has prepared some advice for you, how to choose a proper haircut for...</p>
                         </div>
                         <div class="post-classic-footer">
-                          <div class="post-classic-footer-left"><a class="btn btn-xs btn-primary btn-circle" href="single-post.html">READ MORE</a></div>
+                          <div class="post-classic-footer-left"><a class="btn btn-xs btn-primary btn-circle" href="single-post.php">READ MORE</a></div>
                           <div class="post-classic-footer-right">
                             <ul class="post-classic-meta">
                               <li><span class="icon icon-xxs icon-primary fa fa-heart"></span><span>24</span></li>
@@ -438,12 +334,12 @@
                   <div class="slick-slide-inner">
                     <article class="post-classic"><img class="post-classic-image" src="img/blog-3-770x330.jpg" alt="" width="770" height="330"/>
                       <div class="post-classic-body">
-                        <p class="post-classic-title"><a href="single-post.html">Top 7 Shaving Products</a></p>
+                        <p class="post-classic-title"><a href="single-post.php">Top 7 Shaving Products</a></p>
                         <div class="post-classic-text">
                           <p>The right shaving cream can make the difference between a healthy skin and one plagued by ingrown hairs, razor burns, irritation, and a variety of other issues that arise from nicks and cuts. In the times of old, people used soap when shaving and although there are still plenty of...</p>
                         </div>
                         <div class="post-classic-footer">
-                          <div class="post-classic-footer-left"><a class="btn btn-xs btn-primary btn-circle" href="single-post.html">READ MORE</a></div>
+                          <div class="post-classic-footer-left"><a class="btn btn-xs btn-primary btn-circle" href="single-post.php">READ MORE</a></div>
                           <div class="post-classic-footer-right">
                             <ul class="post-classic-meta">
                               <li><span class="icon icon-xxs icon-primary fa fa-heart"></span><span>24</span></li>
@@ -462,12 +358,12 @@
                   <div class="slick-slide-inner">
                     <article class="post-classic"><img class="post-classic-image" src="img/blog-2-770x330.jpg" alt="" width="770" height="330"/>
                       <div class="post-classic-body">
-                        <p class="post-classic-title"><a href="single-post.html">Visiting a Barber</a></p>
+                        <p class="post-classic-title"><a href="single-post.php">Visiting a Barber</a></p>
                         <div class="post-classic-text">
                           <p>A barber knows how to cut men’s hair. If you’re like most men these days, you’re probably going to some unisex chain salon. Most of the time, you’d walk out of these places with an average haircut. Sometimes...</p>
                         </div>
                         <div class="post-classic-footer">
-                          <div class="post-classic-footer-left"><a class="btn btn-xs btn-primary btn-circle" href="single-post.html">READ MORE</a></div>
+                          <div class="post-classic-footer-left"><a class="btn btn-xs btn-primary btn-circle" href="single-post.php">READ MORE</a></div>
                           <div class="post-classic-footer-right">
                             <ul class="post-classic-meta">
                               <li><span class="icon icon-xxs icon-primary fa fa-heart"></span><span>24</span></li>
@@ -547,12 +443,12 @@
               <h3>Pages</h3>
               <div class="divider divider-conch"></div>
               <ul class="footer-navigation row footer-navigation-vertical" style="max-width: 390px;">
-                <li class="col-xs-6"><a href="index.html">Home</a></li>
-                <li class="col-xs-6"><a href="blog.html">Blog</a></li>
-                <li class="col-xs-6"><a href="about.html">About</a></li>
-                <li class="col-xs-6"><a href="shop.html">Shop</a></li>
-                <li class="col-xs-6"><a href="services.html">Services</a></li>
-                <li class="col-xs-6"><a href="contacts-1.html">Contacts</a></li>
+                <li class="col-xs-6"><a href="index.php">Home</a></li>
+                <li class="col-xs-6"><a href="blog.php">Blog</a></li>
+                <li class="col-xs-6"><a href="about.php">About</a></li>
+                <li class="col-xs-6"><a href="shop.php">Shop</a></li>
+                <li class="col-xs-6"><a href="services.php">Services</a></li>
+                <li class="col-xs-6"><a href="contacts-1.php">Contacts</a></li>
               </ul>
             </div>
             <div class="cell-sm-6 cell-md-5">
