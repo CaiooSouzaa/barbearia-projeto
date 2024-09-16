@@ -67,11 +67,11 @@
                             <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
                               <div class="form-group">
                                 <label class="form-label-outside" for="contact-full-name">Full Name</label>
-                                <input class="form-control" id="contact-full-name" type="text" name="name" data-constraints="@Required">
+                                <input class="form-control" id="contact-full-name" type="text" name="name" data-constraints="@@Required">
                               </div>
                               <div class="form-group">
                                 <label class="form-label-outside" for="contact-phone">Telephone</label>
-                                <input class="form-control" id="contact-phone" type="text" name="phone" data-constraints="@Required @Numeric">
+                                <input class="form-control" id="contact-phone" type="text" name="phone" data-constraints="@@required @@numeric">
                               </div>
                               <button class="btn btn-sm btn-primary btn-block btn-circle" type="submit">SEND REQUEST</button>
                             </form>

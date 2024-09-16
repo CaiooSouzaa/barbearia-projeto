@@ -35,13 +35,13 @@
                   <ul class="rd-navbar-nav">
                     <li class="active"><a href="index.php">Home</a>
                     </li>
-                    <li><a href="sobre.php">Sobre</a>
+                    <li><a href="{{route('sobre-barbeiros')}}">Sobre</a>
                     </li>
-                    <li><a href="servico.php">serviços</a>
+                    <li><a href="{{route('servico')}}">serviços</a>
                     </li>
-                    <li><a href="shop.php">Shop</a>
+                    <li><a href="{{route('shop')}}">Shop</a>
                     </li>
-                    <li><a href="#">Agendamento</a>
+                    <li><a href="{{route('login')}}">Agendamento</a>
                     </li>
                   </ul>
                 </div>
