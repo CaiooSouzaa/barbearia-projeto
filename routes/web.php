@@ -34,9 +34,9 @@ Route::get('/finish', function () {
     return view('finish');
 })->name('finish');
 
-Route::get('/forms', function () {
-    return view('forms');
-})->name('forms');
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 
 Route::get('/privacy-policy', function () {
     return view('privacy-policy');
@@ -64,4 +64,8 @@ Route::get('/sobre-barbeiros', function () {
 
 Route::get('/testimonials', function(){
     return view('testimonials');
+});
+
+Route::get('/login2', function(){
+    return view('login2');
 });
