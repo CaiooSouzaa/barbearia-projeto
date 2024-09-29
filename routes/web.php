@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('layout_inicial.index');
-});
+})->name('index');
 
 Route::get('/404-page', function () {
     return view('404-page');

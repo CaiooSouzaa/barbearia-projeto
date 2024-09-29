@@ -2,7 +2,7 @@
 <html class="wide wow-animation" lang="en">
   <head>
     <!-- Site Title-->
-    <title>Home</title>
+    <title>Pagina inicial</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,8 +55,8 @@
           <div class="shell">
             <div class="range range-sm-center">
               <div class="cell-sm-9 cell-md-8 cell-lg-7">
-                <h1>Enjoy our barber services</h1>
-                <p class="large"> Establish your new amazing look with Barbershop services! From haircuts to hot shaves, you can experience the best level of barbering in the area.</p><a class="btn btn-style-1 btn-primary" href="step-1.php">BOOK NOW</a>
+                <h1>Aproveite nossos serviços de barbeiro</h1>
+                <p class="large">Estabeleça um novo visual incrível com nossos serviços de barbeiro.</p><a class="btn btn-style-1 btn-primary" href="step-1.php">RESERVE AGORA</a>
               </div>
             </div>
           </div>
@@ -68,10 +68,10 @@
           <div class="range range-md-reverse range-xs-middle range-md-right range-50">
             <div class="cell-md-5 cell-lg-4">
               <div class="inset-1">
-                <h2>WHO WE ARE</h2>
+                <h2>QUEM SOMOS</h2>
                 <div class="p text-width-smallest">
-                  <p class="big">Barbershop is a team of highly qualified barbers dedicated to offering the best value. We do this by providing high quality salon services for men and boys, in a warm, friendly atmosphere.</p>
-                </div><a class="btn btn-sm btn-style-1 btn-primary" href="about.php">Read more</a>
+                  <p class="big">Barbershop é uma equipe de barbeiros altamente qualificados, dedicados a oferecer o melhor valor. Fazemos isso fornecendo serviços de salão de alta qualidade para homens e meninos, em uma atmosfera amigável.</p>
+                </div>
               </div>
             </div>
             <div class="cell-md-7 cell-lg-6">
@@ -99,8 +99,8 @@
           <div class="range range-condensed">
             <div class="cell-md-6 cell-md-6-mod-1 image-wrap-left bg-white bg-image" style="background-image: url(img/home-three-2-910x800.jpg);">
               <div class="image-wrap-inner">
-                <h2>OUR<br>SERVICES</h2>
-                <p class="big">Barbershop offers world-class men's haircuts, beard grooming, and hot razor shaves. Here are just some of the services we are famous for.</p><a class="btn btn-style-1 btn-primary" href="services.php">read more</a>
+                <h2>NOSSOS<br>SERVIÇOS</h2>
+                <p class="big">A Barbershop oferece cortes de cabelo masculinos de classe mundial, cuidados com a barba e barbear com lâminas quentes. Aqui estão apenas alguns dos serviços pelos quais somos famosos.</p><a class="btn btn-style-1 btn-primary" href="{{route('servico')}}">leia mais</a>
               </div>
             </div>
             <div class="cell-md-6 cell-md-6-mod-2 image-wrap-right bg-gray-dark bg-image" style="background-image: url(img/home-three-3-1011x800.jpg);">
@@ -110,8 +110,8 @@
                     <article class="box-icon">
                       <figure class="box-icon-image"><img src="img/icon-service-light-3-70x62.png" alt="" width="70" height="62"/>
                       </figure>
-                      <p class="box-icon-header"><a class="link-underlined" href="services.php">BEARD trim</a></p>
-                      <p class="box-icon-text">Well-trimmed beard is a must-have element of every men’s image</p>
+                      <p class="box-icon-header">Aparar BARBA</p>
+                      <p class="box-icon-text">Uma barba bem aparada é um elemento indispensável na imagem de todo homem</p>
                     </article>
                   </div>
                   <div class="cell-xs-6">
@@ -212,9 +212,9 @@
         <div class="shell">
           <div class="range range-50">
             <div class="cell-xs-12">
-              <h2>OUR BARBERS</h2>
+              <h2>Nossos barbeiros</h2>
               <div class="p text-width-medium">
-                <p class="big">We employ only highly qualified barbers who are not just professionals, but also enjoy maintaining the atmosphere of a classic barbershop.</p>
+                <p class="big">Empregamos apenas barbeiros altamente qualificados que não são apenas profissionais, mas também gostam de manter a atmosfera de uma barbearia clássica</p>
               </div>
             </div>
             <div class="cell-xs-12">
@@ -271,7 +271,7 @@
         </div>
       </section>
 
-      <section class="section-lg bg-periglacial-blue text-center">
+      <!--<section class="section-lg bg-periglacial-blue text-center">
         <div class="shell">
           <div class="range range-sm-center range-75">
             <div class="cell-xs-12">
@@ -382,9 +382,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <section class="box-wrap box-wrap-md bg-white">
+      <!--<section class="box-wrap box-wrap-md bg-white">
         <div class="box-wrap-map">
           <div class="rd-google-map rd-google-map__model" data-zoom="14" data-x="-74.0150000" data-y="40.643180">
             <ul class="map_locations"></ul>
@@ -434,7 +434,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <footer class="page-footer page-footer-variant-3">
         <div class="shell">

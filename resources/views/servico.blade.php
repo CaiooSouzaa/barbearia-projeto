@@ -21,7 +21,7 @@
       <main class="page-content" id="perspective">
         <div class="content-wrapper">
           <div class="page-header page-header-perspective">
-            <div class="page-header-left"><a class="brand" href="index.php"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
+            <div class="page-header-left"><a class="brand" href="{{route('index')}}"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
             <div class="page-header-right">
               <div class="booking-control"><a class="btn btn-xs btn-circle btn-primary" href="step-1.php">BOOK NOW</a></div>
               <div id="perspective-open-menu" data-custom-toggle=".perspective-menu-toggle" data-custom-toggle-hide-on-blur="true"><span class="perspective-menu-text">Menu</span>
@@ -150,12 +150,12 @@
             <footer class="page-footer page-footer-default">
               <div class="shell">
                 <div class="range range-xs-center">
-                  <div class="cell-lg-10"><a class="brand" href="index.php"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a>
+                  <div class="cell-lg-10"><a class="brand" href="{{route('index')}}"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a>
                     <div class="text-highlighted-wrap">
                       <p class="text-highlighted">Barbershop is a No.1 place to have a men’s haircut in San Francisco. Here you can get luxury barber experience at a reasonable price.</p>
                     </div>
                     <ul class="footer-navigation footer-navigation-horizontal">
-                      <li><a href="index.php">Home</a></li>
+                      <li><a href="{{route('index')}}">Home</a></li>
                       <li><a href="about.php">About</a></li>
                       <li class="active"><a href="services.php">Services</a></li>
                       <li><a href="blog.php">Blog</a></li>
@@ -182,15 +182,15 @@
             <div class="rd-navbar-inner">
               <div class="rd-navbar-panel">
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                <div class="rd-navbar-brand"><a class="brand-name" href="index.php"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
+                <div class="rd-navbar-brand"><a class="brand-name" href="{{route('index')}}"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
               </div>
               <div class="rd-navbar-nav-wrap">
                 <div class="rd-navbar-nav-inner">
                   <ul class="rd-navbar-nav">
-                    <li><a href="index.php">Home</a>
+                    <li><a href="{{route('index')}}">Home</a>
                       <ul class="rd-navbar-megamenu">
                         <li>
-                          <p class="rd-megamenu-header"><a href="index.php">Home</a></p>
+                          <p class="rd-megamenu-header"><a href="{{route('index')}}">Home</a></p>
                           <ul class="rd-megamenu-list">
                             <li><a href="home-variant-2.php">Home variant 2</a></li>
                             <li><a href="home-variant-3.php">Home variant 3</a></li>
