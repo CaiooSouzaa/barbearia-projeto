@@ -15,7 +15,7 @@ Route::get('/505-page', function () {
 })->name('505-page');
 
 Route::get('/agendamento', function () {
-    return view('agendamentp');
+    return view('agendamento');
 })->name('agendamento');
 
 Route::get('/cart', function () {

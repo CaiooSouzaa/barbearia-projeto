@@ -155,12 +155,16 @@
                       <p class="text-highlighted">Barbershop is a No.1 place to have a men’s haircut in San Francisco. Here you can get luxury barber experience at a reasonable price.</p>
                     </div>
                     <ul class="footer-navigation footer-navigation-horizontal">
-                      <li><a href="{{route('index')}}">Home</a></li>
-                      <li><a href="about.php">About</a></li>
-                      <li class="active"><a href="services.php">Services</a></li>
-                      <li><a href="blog.php">Blog</a></li>
-                      <li><a href="shop.php">Shop</a></li>
-                      <li><a href="contacts-1.php">Contacts</a></li>
+                      <li><a href="{{ route('index') }}">Home</a>
+                      </li>
+                      <li><a href="{{ route('sobre-barbeiros') }}">Sobre</a>
+                      </li>
+                      <li class="active"><a href="{{ route('servico') }}">serviços</a>
+                      </li>
+                      <li><a href="{{ route('login') }}">Agendamento</a>
+                      </li>
+                      <li><a href="{{ route('login') }}">Login/Registrar</a>
+                      </li>
                     </ul>
                     <div class="divider divider-small divider-light block-centered"></div>
                     <ul class="inline-list inline-list-md">

@@ -33,7 +33,7 @@
                         <div class="rd-navbar-panel">
                             <button class="rd-navbar-toggle"
                                 data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                            <div class="rd-navbar-brand"><a class="brand-name" href="index.php">
+                            <div class="rd-navbar-brand"><a class="brand-name" href="{{ route('index') }}">
                                     <div class="brand-mobile"><img src="img/logo-default-dark-200x36.png" alt=""
                                             width="200" height="36" />
                                     </div>
@@ -45,15 +45,13 @@
                         <div class="rd-navbar-nav-wrap">
                             <div class="rd-navbar-nav-inner">
                                 <ul class="rd-navbar-nav">
-                                    <li class="active"><a href="index.php">Home</a>
+                                    <li class="active"><a href="{{ route('index') }}">Home</a>
                                     </li>
                                     <li><a href="{{ route('sobre-barbeiros') }}">Sobre</a>
                                     </li>
                                     <li><a href="{{ route('servico') }}">serviços</a>
                                     </li>
-                                    <li><a href="{{ route('login') }}">Agendamento</a>
-                                    </li>
-                                    <li><a href="{{ route('shop') }}">Shop</a>
+                                    <li><a href="{{ route('agendamento') }}">Agendamento</a>
                                     </li>
                                     <li><a href="{{ route('login') }}">Login/Registrar</a>
                                     </li>
@@ -147,8 +145,7 @@
                                         <figure class="box-icon-image"><img src="img/icon-service-light-4-70x62.png"
                                                 alt="" width="70" height="62" />
                                         </figure>
-                                        <p class="box-icon-header"><a class="link-underlined"
-                                                href="services.php">APARAR BIGODE</a></p>
+                                        <p class="box-icon-header">APARAR BIGODE</p>
                                         <p class="box-icon-text">Os bigodes também precisam ser aparados regularmente
                                         </p>
                                     </article>
@@ -158,8 +155,7 @@
                                         <figure class="box-icon-image"><img src="img/icon-service-light-1-70x62.png"
                                                 alt="" width="70" height="62" />
                                         </figure>
-                                        <p class="box-icon-header"><a class="link-underlined"
-                                                href="services.php">CORTES DE CABELO TRADICIONAIS</a></p>
+                                        <p class="box-icon-header">CORTES DE CABELO TRADICIONAIS</p>
                                         <p class="box-icon-text">Um dos serviços mais populares que nossos barbeiros
                                             oferecem</p>
                                     </article>
@@ -169,8 +165,7 @@
                                         <figure class="box-icon-image"><img src="img/icon-service-light-2-70x62.png"
                                                 alt="" width="70" height="62" />
                                         </figure>
-                                        <p class="box-icon-header"><a class="link-underlined"
-                                                href="services.php">BARBEAR</a></p>
+                                        <p class="box-icon-header">BARBEAR</p>
                                         <p class="box-icon-text">Nossos serviços de barbear farão você ficar realmente
                                             bonito</p>
                                     </article>
@@ -182,68 +177,7 @@
             </div>
         </section>
 
-        <!--<section class="section-xl bg-periglacial-blue text-center">
-        <div class="shell">
-          <div class="range range-sm-center range-75">
-            <div class="cell-xs-12">
-              <h2>TESTIMONIALS</h2>
-              <div class="p text-width-medium">
-                <p class="big">These reviews that our clients have recently submitted are the best way to learn more about our barbershop’s level of service and customer support.</p>
-              </div>
-            </div>
-            <div class="cell-xs-12">
-              Owl Carousel
-              <div class="owl-carousel owl-carousel-modern owl-style-1" data-items="1" data-stage-padding="0" data-loop="true" data-margin="20" data-xs-margin="30" data-mouse-drag="false" data-nav="true" data-dots="true" data-animation-in="fadeIn" data-animation-out="fadeOut">
-                <div class="item">
-                  <blockquote class="quote-centered">
-                    <div class="quote-centered-avatar"><img src="img/testimonials-1-100x100.jpg" alt="" width="100" height="100"/>
-                    </div>
-                    <cite>Matt Parker</cite>
-                    <p class="quote-centered-text">
-                      <q>I have taken my 3 yr old son for his first men’s haircut and now I’m glad he has such a fantastic look. I recommend any of the barbers at Barbershop for service and pride in their work. I believe my son would never be allowed to leave the chair without a really handsome cut.</q>
-                    </p>
-                    <ul class="inline-list inline-list-md">
-                      <li><a class="icon icon-xs link-gray-base fa-facebook" href="#"></a></li>
-                      <li><a class="icon icon-xs link-gray-base fa-twitter" href="#"></a></li>
-                      <li><a class="icon icon-xs link-gray-base fa-linkedin" href="#"></a></li>
-                    </ul>
-                  </blockquote>
-                </div>
-                <div class="item">
-                  <blockquote class="quote-centered">
-                    <div class="quote-centered-avatar"><img src="img/testimonials-2-100x100.jpg" alt="" width="100" height="100"/>
-                    </div>
-                    <cite>John Miller</cite>
-                    <p class="quote-centered-text">
-                      <q>I wouldn't go anywhere else in San Francisco. I've been coming here for the last year and I've never felt better about paying good money for a haircut. The guys know what they are doing, give solid advice, and cut like pros. I wasn't used to this before but I’ll visit Barbershop again.</q>
-                    </p>
-                    <ul class="inline-list inline-list-md">
-                      <li><a class="icon icon-xs link-gray-base fa-facebook" href="#"></a></li>
-                      <li><a class="icon icon-xs link-gray-base fa-twitter" href="#"></a></li>
-                      <li><a class="icon icon-xs link-gray-base fa-linkedin" href="#"></a></li>
-                    </ul>
-                  </blockquote>
-                </div>
-                <div class="item">
-                  <blockquote class="quote-centered">
-                    <div class="quote-centered-avatar"><img src="img/testimonials-3-100x100.jpg" alt="" width="100" height="100"/>
-                    </div>
-                    <cite>Anthony Smith</cite>
-                    <p class="quote-centered-text">
-                      <q>Polite, professional, charming and courteous team. The best haircut I have ever had! Simon was full of crack, was more than happy to suggest the best cut for me and he even offered a free beverage - what more could you want?! This barbershop is indeed my favorite one.</q>
-                    </p>
-                    <ul class="inline-list inline-list-md">
-                      <li><a class="icon icon-xs link-gray-base fa-facebook" href="#"></a></li>
-                      <li><a class="icon icon-xs link-gray-base fa-twitter" href="#"></a></li>
-                      <li><a class="icon icon-xs link-gray-base fa-linkedin" href="#"></a></li>
-                    </ul>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
+        <section class="section-xl bg-periglacial-blue text-center"></section>
 
         <section class="section-xl bg-gray-dark bg-image text-center"
             style="background-image: url(img/bg-image-1.jpg);">
@@ -264,18 +198,10 @@
                                         height="310" />
                                     <div class="thumbnail-card-body">
                                         <p class="thumbnail-card-header" data-toggle="modal"
-                                            data-target="#modalWindow">simon Wilson</p>
+                                            data-target="#modalWindow">Simon Wilson</p>
                                         <div class="thumbnail-card-text">
-                                            <p>Mr. Wilson is the founder and owner of our barbershop.</p>
+                                            <p>O Sr. Wilson é o fundador e proprietário da nossa barbearia.</p>
                                         </div>
-                                        <ul class="inline-list inline-list-md">
-                                            <li><a class="icon icon-xs link-gray-base fa-facebook" href="#"></a>
-                                            </li>
-                                            <li><a class="icon icon-xs link-gray-base fa-twitter" href="#"></a>
-                                            </li>
-                                            <li><a class="icon icon-xs link-gray-base fa-linkedin" href="#"></a>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -287,16 +213,8 @@
                                         <p class="thumbnail-card-header" data-toggle="modal"
                                             data-target="#modalWindow">Harry Anderson</p>
                                         <div class="thumbnail-card-text">
-                                            <p>Harry brings a detailed, meticulous approach to styling.</p>
+                                            <p>Harry traz uma abordagem detalhada e meticulosa ao estilo.</p>
                                         </div>
-                                        <ul class="inline-list inline-list-md">
-                                            <li><a class="icon icon-xs link-gray-base fa-facebook" href="#"></a>
-                                            </li>
-                                            <li><a class="icon icon-xs link-gray-base fa-twitter" href="#"></a>
-                                            </li>
-                                            <li><a class="icon icon-xs link-gray-base fa-linkedin" href="#"></a>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -308,23 +226,13 @@
                                         <p class="thumbnail-card-header" data-toggle="modal"
                                             data-target="#modalWindow">Matthew phillips</p>
                                         <div class="thumbnail-card-text">
-                                            <p>Matthew has several years of experience in the barber industry.</p>
+                                            <p>Matthew tem vários anos de experiência na indústria de barbearia.</p>
                                         </div>
-                                        <ul class="inline-list inline-list-md">
-                                            <li><a class="icon icon-xs link-gray-base fa-facebook" href="#"></a>
-                                            </li>
-                                            <li><a class="icon icon-xs link-gray-base fa-twitter" href="#"></a>
-                                            </li>
-                                            <li><a class="icon icon-xs link-gray-base fa-linkedin" href="#"></a>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="cell-xs-12"><a class="btn btn-sm btn-style-1 btn-primary" href="barbers.php">VIEW all
-                            team</a></div>
                 </div>
             </div>
         </section>
@@ -513,7 +421,9 @@
                         <h3>Descrição</h3>
                         <div class="divider divider-conch"></div>
                         <div class="text-highlighted-wrap">
-                            <p class="text-highlighted">Barbershop é o lugar número 1 para corte de cabelo masculino em São Francisco. Aqui você pode ter uma experiência de barbeiro de luxo a um preço razoável.</p>
+                            <p class="text-highlighted">Barbershop é o lugar número 1 para corte de cabelo masculino em
+                                São Francisco. Aqui você pode ter uma experiência de barbeiro de luxo a um preço
+                                razoável.</p>
                         </div>
                     </div>
                     <div class="cell-sm-6 cell-md-3">
