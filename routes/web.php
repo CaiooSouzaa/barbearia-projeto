@@ -61,3 +61,7 @@ Route::get('/testimonials', function(){
 Route::get('/login2', function(){
     return view('login2');
 });
+
+Route::get('/index', function(){
+    return view('adm_dashbord.index');
+});
