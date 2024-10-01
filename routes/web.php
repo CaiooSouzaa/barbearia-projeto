@@ -6,14 +6,6 @@ Route::get('/', function () {
     return view('layout_inicial.index');
 })->name('index');
 
-Route::get('/404-page', function () {
-    return view('404-page');
-})->name('404-page');
-
-Route::get('/505-page', function () {
-    return view('505-page');
-})->name('505-page');
-
 Route::get('/agendamento', function () {
     return view('agendamento');
 })->name('agendamento');

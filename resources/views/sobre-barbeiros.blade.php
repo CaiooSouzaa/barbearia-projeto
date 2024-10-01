@@ -21,7 +21,7 @@
       <main class="page-content" id="perspective">
         <div class="content-wrapper">
           <div class="page-header page-header-perspective">
-            <div class="page-header-left"><a class="brand" href="{{route('{{ route('index') }}')}}"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
+            <div class="page-header-left"><a class="brand" href="{{route('index')}}"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
             <div class="page-header-right">
               <div class="booking-control"><a class="btn btn-xs btn-circle btn-primary" href="step-1.php">BOOK NOW</a></div>
               <div id="perspective-open-menu" data-custom-toggle=".perspective-menu-toggle" data-custom-toggle-hide-on-blur="true"><span class="perspective-menu-text">Menu</span>
