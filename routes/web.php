@@ -63,5 +63,14 @@ Route::get('/login2', function(){
 });
 
 Route::get('/index', function(){
-    return view('adm_dashbord.index');
+    return view('adm_dashboard.index');
 });
+
+Route::get('/dashboard', function(){
+    return view('adm_dashboard.dashboard');
+});
+Route::get('/tables', function(){
+    return view('adm_dashboard.tables');
+});
+
+
