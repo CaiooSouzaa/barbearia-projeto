@@ -142,7 +142,7 @@
                                 </div>
                                 <div class="cell-xs-6">
                                     <article class="box-icon">
-                                        <figure class="box-icon-image"><img src="img/icon-service-light-4-70x62.png"
+                                        <figure class="box-icon-image"><img src="/assets/img/icon-service-light-4-70x62.png"
                                                 alt="" width="70" height="62" />
                                         </figure>
                                         <p class="box-icon-header">APARAR BIGODE</p>
@@ -194,7 +194,7 @@
                         <div class="range range-30">
                             <div class="cell-sm-6 cell-md-4 height-fill">
                                 <div class="thumbnail-card"><img class="thumbnail-card-image"
-                                        src=/assets/img/barbers-1-370x310.jpg" alt="" width="370"
+                                        src="/assets/img/barbers-1-370x310.jpg" alt="" width="370"
                                         height="310" />
                                     <div class="thumbnail-card-body">
                                         <p class="thumbnail-card-header" data-toggle="modal"
@@ -207,7 +207,7 @@
                             </div>
                             <div class="cell-sm-6 cell-md-4 height-fill">
                                 <div class="thumbnail-card"><img class="thumbnail-card-image"
-                                        src="img/barbers-2-370x310.jpg" alt="" width="370"
+                                        src="/assets/img/barbers-2-370x310.jpg" alt="" width="370"
                                         height="310" />
                                     <div class="thumbnail-card-body">
                                         <p class="thumbnail-card-header" data-toggle="modal"
