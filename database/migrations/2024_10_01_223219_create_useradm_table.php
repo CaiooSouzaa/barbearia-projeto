@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('useradm', function (Blueprint $table) {
             $table->id();
+            $table->string('name_adm');
+            $table->string('senha_adm');
+            $table->boolean('user_ativo')->default(1);
             $table->timestamps();
         });
     }

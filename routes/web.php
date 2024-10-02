@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserAdmController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -69,9 +71,6 @@ Route::get('/index', function(){
 Route::get('/dashboard', function(){
     return view('adm_dashboard.dashboard');
 });
-Route::get('/tables', function(){
-    return view('adm_dashboard.tables');
-});
-
+Route::get('/tabelas', [UserAdmController::class, 'index']);
 
 
