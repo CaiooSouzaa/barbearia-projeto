@@ -45,7 +45,6 @@
                                 </thead>
                                 <!--parte que vai aparecer os dados-->
                                 <tbody>
-
                                     @foreach ($cliente as $linhas)
                                         <tr>
                                             <td>{{ $linhas->id }}</td>
@@ -63,7 +62,6 @@
                                                     <span class='fa fa-pencil'></span>
                                                 </a>
                                             </td>
-
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -92,13 +90,26 @@
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="name_cliente" id="name_cliente"
                                 placeholder="Digite o nome">
-                            <label for="floatingInput">Nome</label>
+                            <label for="floatingInput">NOME</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente"
+                                placeholder="Digite o nome">
+                            <label for="floatingInput">CPF</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="numero_cliente" id="numero_cliente"
+                                placeholder="Digite o nome">
+                            <label for="floatingInput">TELEFONE</label>
                         </div>
 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submite" class="btn btn-primary">Salvar</button>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+
                     </div>
                 </form>
             </div>

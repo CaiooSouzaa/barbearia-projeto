@@ -9,28 +9,38 @@
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
-                Id cliente: {{$cliente-> id}}
+                Id cliente: {{ $userAlterar->id }}
             </div>
             <div class="modal-content">
-                <!--colocar /upd em action para pegar -->
-                <form method="POST" action="/tabelas/upd">
-                    @csrf <!--colocar quando tiver formulario-->
+                <form method="POST" action="{{ route('tabelas.upd', ['id' => $userAlterar->id]) }}">
+                    @csrf
                     <div class="modal-body">
-                        <input type="text" name="id" value="{{ $cliente->id }}" />
+                        <input type="hidden" name="id" value="{{ $userAlterar->id }}" />
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="name_cliente" id="name_cliente"
-                                placeholder="Digite o nome" value="{{ $cliente->name_cliente }}"/>
-                            <label for="floatingInput">Nome</label>
+                                placeholder="Digite o nome" value="{{ $userAlterar->name_cliente }}"/>
+                            <label for="name_cliente">NOME</label>
                         </div>
 
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente"
+                                placeholder="Digite o CPF" value="{{ $userAlterar->cpf_cliente }}"/>
+                            <label for="cpf_cliente">CPF</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="numero_cliente" id="numero_cliente"
+                                placeholder="Digite o telefone" value="{{ $userAlterar->numero_cliente }}"/>
+                            <label for="numero_cliente">TELEFONE</label>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submite" class="btn btn-primary">Salvar</button>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
                     </div>
                 </form>
             </div>
-            <div class = "card-body">
+            <div class="card-body">
             </div>
         </div>
     </div>

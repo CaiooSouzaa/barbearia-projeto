@@ -10,6 +10,7 @@ class UserClienteController extends Controller
     public function index_cliente()
     {
         $cliente = UserCliente::where("ativo_cliente", "1")->get();
+
         return view('tabelas.tables_cliente', compact('cliente'));
     }
 
@@ -23,7 +24,7 @@ class UserClienteController extends Controller
         $novaCliente->name_cliente = $name_cliente;
         $novaCliente->cpf_cliente = $cpf_cliente;
         $novaCliente->numero_cliente = $numero_cliente;
-        $novaCliente->ativo_cliente = 0;
+        $novaCliente->ativo_cliente = 1;
         $novaCliente->save();
 
         return redirect('/tabelas');
@@ -32,7 +33,7 @@ class UserClienteController extends Controller
     public function ExcluirCliente($id){
         $userCliente = UserCliente::where("id", $id)->first();
 
-        $userCliente->ativo_cliente = 0;
+        $userCliente->ativo_cliente = 1;
         $userCliente->save();
     }
 

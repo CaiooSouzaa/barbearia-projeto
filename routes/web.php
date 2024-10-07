@@ -71,6 +71,6 @@ Route::get('/dashboard', function () {
 
 Route::get('/tabelas', [UserClienteController::class, 'index_cliente'])->name('tabelas');
 Route::post('/tabelas', [UserClienteController::class, 'IncluirCliente']);
-Route::post('/tabelas/upd', [UserClienteController::class, 'ExecutaAlteracao']);
+Route::post('/tabelas/upd/{id}', [UserClienteController::class, 'ExecutarAlteracao'])->name('tabelas.upd');
 Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente'])->name('tabelas_ex');
 Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlteracao'])->name('tabelas_upd');
