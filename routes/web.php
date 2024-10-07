@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserAdmController;
+use App\Http\Controllers\UserClienteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -68,6 +69,7 @@ Route::get('/dashboard', function(){
     return view('adm_dashboard.dashboard');
 })->name('dashboard');
 
-Route::get('/tabelas', [UserAdmController::class, 'index'])->name('tabelas');
+Route::get('/tabelas', [UserClienteController::class, 'index_cliente'])->name('tabelas');
+Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente'])->name('tabelas_ex');
 
 

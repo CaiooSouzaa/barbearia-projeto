@@ -26,4 +26,30 @@ class UserAdmController extends Controller
 
         return redirect('/tabelas');
     }
+
+    public function ExcluirCategoria($id){
+        $user = UserAdm::where("id", $id)->first();
+
+        $user->user_ativo = 0;
+        $user->save();
+    }
+
+    public function BuscarAlterar($id){
+        $userAlterar = UserAdm::where("id", $id)->first();
+
+        return view('tabela_clientes.alterar_cliente', compact('userAlterar'));
+    }
+
+    public function ExecutarAlteracao(Request $request){
+        $dado_nome = $request->input("name_adm");
+        $dado_senha = $request->input("senha_adm");
+        $dado_id = $request->input('id');
+
+        $user = UserAdm::where("id", $dado_id)->first();
+        $user->name_adm = $dado_nome;
+        $user->senha_adm = $dado_senha;
+        $user->save();
+
+        return redirect('/tabelas');
+    }
 }
