@@ -1,15 +1,26 @@
 @extends('tabelas.tables')
 @section('conteudo')
     <div class="container-fluid py-4">
+        <div class = "card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="" class = "btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        NOVO
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12">
                 <div class="card my-4">
+
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                             <h6 class="text-white text-capitalize ps-3">Authors table</h6>
                         </div>
                     </div>
                     <div class="card-body px-0 pb-2">
+
                         <div class="table-responsive p-0">
 
                             <table class="table align-items-center mb-0">
@@ -34,10 +45,10 @@
                                 </thead>
                                 <!--parte que vai aparecer os dados-->
                                 <tbody>
-      
+
                                     @foreach ($cliente as $linhas)
                                         <tr>
-                                            <td>{{ $linhas->id }}</td>                                            
+                                            <td>{{ $linhas->id }}</td>
                                             <td>{{ $linhas->name_cliente }}</td>
                                             <td>{{ $linhas->cpf_cliente }}</td>
                                             <td>{{ $linhas->numero_cliente }}</td>
@@ -47,13 +58,16 @@
                                                     <span class='fa fa-trash'></span>
                                                 </a>
                                                 |
-
+                                                <a href='{{ route('tabelas_upd', ['id' => $linhas->id]) }}'
+                                                    class='btn btn-success'>
+                                                    <span class='fa fa-pencil'></span>
+                                                </a>
                                             </td>
 
                                         </tr>
-                                        @endforeach
+                                    @endforeach
                                 </tbody>
-                                
+
                             </table>
 
                         </div>
@@ -70,20 +84,15 @@
                 <form method="POST" action="/tabelas">
                     @csrf <!--colocar quando tiver formulario-->
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nova categoria</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Novos clientes</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="nome_cliente" id="nome_cliente"
+                            <input type="text" class="form-control" name="name_cliente" id="name_cliente"
                                 placeholder="Digite o nome">
                             <label for="floatingInput">Nome</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="cat_descricao" id="cat_descricao"
-                                placeholder="Digite o nome da categoria">
-                            <label for="floatingInput">Categoria</label>
                         </div>
 
                     </div>

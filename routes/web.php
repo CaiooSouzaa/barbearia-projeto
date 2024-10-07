@@ -49,7 +49,7 @@ Route::get('/shop', function () {
     return view('shop');
 })->name('shop');
 
-Route::get('/single-product', function(){
+Route::get('/single-product', function () {
     return view('single-product');
 })->name('sigle-product');
 
@@ -57,19 +57,20 @@ Route::get('/sobre-barbeiros', function () {
     return view('sobre-barbeiros');
 })->name('sobre-barbeiros');
 
-Route::get('/testimonials', function(){
+Route::get('/testimonials', function () {
     return view('testimonials');
 });
 
-Route::get('/login2', function(){
+Route::get('/login2', function () {
     return view('login2');
 });
 
-Route::get('/dashboard', function(){
+Route::get('/dashboard', function () {
     return view('adm_dashboard.dashboard');
 })->name('dashboard');
 
 Route::get('/tabelas', [UserClienteController::class, 'index_cliente'])->name('tabelas');
+Route::post('/tabelas', [UserClienteController::class, 'IncluirCliente']);
+Route::post('/tabelas/upd', [UserClienteController::class, 'ExecutaAlteracao']);
 Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente'])->name('tabelas_ex');
-
-
+Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlteracao'])->name('tabelas_upd');
