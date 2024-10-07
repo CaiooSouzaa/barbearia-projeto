@@ -64,13 +64,10 @@ Route::get('/login2', function(){
     return view('login2');
 });
 
-Route::get('/index', function(){
-    return view('adm_dashboard.index');
-});
-
 Route::get('/dashboard', function(){
     return view('adm_dashboard.dashboard');
-});
-Route::get('/tabelas', [UserAdmController::class, 'index']);
+})->name('dashboard');
+
+Route::get('/tabelas', [UserAdmController::class, 'index'])->name('tabelas');
 
 
