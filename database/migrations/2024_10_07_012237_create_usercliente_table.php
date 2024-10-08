@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("name_cliente");
             $table->string("cpf_cliente");
-            $table->integer("numero_cliente");
+            $table->string("numero_cliente");
             $table->boolean("ativo_cliente")->default(1);
             $table->timestamps();
         });

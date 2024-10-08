@@ -20,29 +20,40 @@
                     </div>
                     <div class="card-body px-0 pb-2">
                         <div class="table-responsive p-0">
-                            <table class="table align-items-center mb-0">
-                                <thead>
+                            <table class="table table-bordered align-items-center mb-0">
+                                <thead class="text-center">
                                     <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NOME</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">CPF</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TELEFONE</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">AÇÕES</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID
+                                        </th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            NOME</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            CPF</th>
+                                        <th
+                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            TELEFONE</th>
+                                        <th
+                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            AÇÕES</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($cliente as $linhas)
                                         <tr>
-                                            <td>{{ $linhas->id }}</td>
+                                            <td class="text-center">{{ $linhas->id }}</td>
                                             <td>{{ $linhas->name_cliente }}</td>
                                             <td>{{ $linhas->cpf_cliente }}</td>
-                                            <td>{{ $linhas->numero_cliente }}</td>
+                                            <td class="text-center">{{ $linhas->numero_cliente }}</td>
                                             <td class="text-center">
                                                 <div class="d-flex justify-content-center">
-                                                    <a href="{{ route('tabelas_ex', ['id' => $linhas->id]) }}" class="btn btn-danger me-2" aria-label="Excluir">
+                                                    <button class="btn btn-danger me-2"
+                                                        onclick="openDeleteModal({{ $linhas->id }})">
                                                         <span class="fa fa-trash"></span>
-                                                    </a>
-                                                    <a href="{{ route('tabelas_upd', ['id' => $linhas->id]) }}" class="btn btn-success" aria-label="Alterar">
+                                                    </button>
+                                                    <a href="{{ route('tabelas_upd', ['id' => $linhas->id]) }}"
+                                                        class="btn btn-success" aria-label="Alterar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
                                                 </div>
@@ -58,7 +69,29 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal de Confirmação de Exclusão -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="deleteForm" method="GET" action="">
+                    @csrf
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmDeleteLabel">Confirmar Exclusão</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Você tem certeza de que deseja excluir este cliente?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Adicionar Cliente -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -71,16 +104,20 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="name_cliente" class="form-label">NOME</label>
-                            <input type="text" class="form-control" name="name_cliente" id="name_cliente" placeholder="Digite o nome" required>
+                            <input type="text" class="form-control" name="name_cliente" id="name_cliente"
+                                placeholder="Digite o nome" required>
                         </div>
                         <div class="mb-3">
                             <label for="cpf_cliente" class="form-label">CPF</label>
-                            <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" placeholder="Digite o CPF" required>
+                            <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente"
+                                placeholder="Digite o CPF" required>
                         </div>
                         <div class="mb-3">
                             <label for="numero_cliente" class="form-label">TELEFONE</label>
-                            <input type="text" class="form-control" name="numero_cliente" id="numero_cliente" placeholder="Digite o telefone" required>
+                            <input type="text" class="form-control" name="numero_cliente" id="numero_cliente"
+                                placeholder="Digite o telefone" required>
                         </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -90,4 +127,13 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function openDeleteModal(id) {
+            const form = document.getElementById('deleteForm');
+            form.action = `/tabelas/exc/${id}`;
+            const deleteModal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+            deleteModal.show();
+        }
+    </script>
 @endsection
