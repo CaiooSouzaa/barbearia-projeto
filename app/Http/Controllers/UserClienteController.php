@@ -33,14 +33,15 @@ class UserClienteController extends Controller
     public function ExcluirCliente($id){
         $userCliente = UserCliente::where("id", $id)->first();
 
-        $userCliente->ativo_cliente = 1;
+        $userCliente->ativo_cliente = 0;
         $userCliente->save();
+        return redirect('/tabelas');
     }
 
     public function BuscarAlterar($id){
         $userAlterar = UserCliente::where("id", $id)->first();
 
-        return view('tabela_clientes.alterar_cliente', compact('userAlterar'));
+        return view('tabelas.alterar_cliente', compact('userAlterar'));
     }
 
     public function ExecutarAlteracao(Request $request){
