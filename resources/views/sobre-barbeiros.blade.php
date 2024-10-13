@@ -10,7 +10,7 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono:300,300italic,400,700%7CArvo:400,700">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 		<!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="img/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
@@ -21,7 +21,7 @@
       <main class="page-content" id="perspective">
         <div class="content-wrapper">
           <div class="page-header page-header-perspective">
-            <div class="page-header-left"><a class="brand" href="{{route('index')}}"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
+            <div class="page-header-left"><a class="brand" href="{{route('index')}}"><img src="/assets/img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
             <div class="page-header-right">
               <div class="booking-control"><a class="btn btn-xs btn-circle btn-primary" href="step-1.php">BOOK NOW</a></div>
               <div id="perspective-open-menu" data-custom-toggle=".perspective-menu-toggle" data-custom-toggle-hide-on-blur="true"><span class="perspective-menu-text">Menu</span>
@@ -47,7 +47,7 @@
               <div class="shell">
                 <div class="range range-30">
                   <div class="cell-sm-6 cell-md-4 height-fill">
-                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="img/barbers-1-370x310.jpg" alt="" width="370" height="310"/>
+                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="/assets/img/barbers-1-370x310.jpg" alt="" width="370" height="310"/>
                       <div class="thumbnail-card-body">
                         <p class="thumbnail-card-header" data-toggle="modal" data-target="#modalWindow">simon Wilson</p>
                         <div class="thumbnail-card-text">
@@ -62,7 +62,7 @@
                     </div>
                   </div>
                   <div class="cell-sm-6 cell-md-4 height-fill">
-                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="img/barbers-2-370x310.jpg" alt="" width="370" height="310"/>
+                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="/assets/img/barbers-2-370x310.jpg" alt="" width="370" height="310"/>
                       <div class="thumbnail-card-body">
                         <p class="thumbnail-card-header" data-toggle="modal" data-target="#modalWindow">Harry Anderson</p>
                         <div class="thumbnail-card-text">
@@ -77,7 +77,7 @@
                     </div>
                   </div>
                   <div class="cell-sm-6 cell-md-4 height-fill">
-                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="img/barbers-3-370x310.jpg" alt="" width="370" height="310"/>
+                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="/assets/img/barbers-3-370x310.jpg" alt="" width="370" height="310"/>
                       <div class="thumbnail-card-body">
                         <p class="thumbnail-card-header" data-toggle="modal" data-target="#modalWindow">Matthew phillips</p>
                         <div class="thumbnail-card-text">
@@ -92,7 +92,7 @@
                     </div>
                   </div>
                   <div class="cell-sm-6 cell-md-4 height-fill">
-                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="img/barbers-4-370x310.jpg" alt="" width="370" height="310"/>
+                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="/assets/img/barbers-4-370x310.jpg" alt="" width="370" height="310"/>
                       <div class="thumbnail-card-body">
                         <p class="thumbnail-card-header" data-toggle="modal" data-target="#modalWindow">Edward Allen</p>
                         <div class="thumbnail-card-text">
@@ -107,7 +107,7 @@
                     </div>
                   </div>
                   <div class="cell-sm-6 cell-md-4 height-fill">
-                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="img/barbers-5-370x310.jpg" alt="" width="370" height="310"/>
+                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="/assets/img/barbers-5-370x310.jpg" alt="" width="370" height="310"/>
                       <div class="thumbnail-card-body">
                         <p class="thumbnail-card-header" data-toggle="modal" data-target="#modalWindow">Scott Russell</p>
                         <div class="thumbnail-card-text">
@@ -122,7 +122,7 @@
                     </div>
                   </div>
                   <div class="cell-sm-6 cell-md-4 height-fill">
-                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="img/barbers-6-370x310.jpg" alt="" width="370" height="310"/>
+                    <div class="thumbnail-card"><img class="thumbnail-card-image" src="/assets/img/barbers-6-370x310.jpg" alt="" width="370" height="310"/>
                       <div class="thumbnail-card-body">
                         <p class="thumbnail-card-header" data-toggle="modal" data-target="#modalWindow">James Young</p>
                         <div class="thumbnail-card-text">
@@ -151,7 +151,7 @@
                   </div>
                   <div class="cell-xs-12">
                     <div class="thumbnail-fullwidth" data-toggle="modal" data-target="#modalWindow">
-                      <div class="thumbnail-fullwidth-left"><img src="img/barbers-7-400x480.jpg" alt="" width="400" height="480"/>
+                      <div class="thumbnail-fullwidth-left"><img src="/assets/img/barbers-7-400x480.jpg" alt="" width="400" height="480"/>
                       </div>
                       <div class="thumbnail-fullwidth-body">
                         <p class="thumbnail-fullwidth-header">Simon Wilson</p>
@@ -208,7 +208,7 @@
                       </div>
                     </div>
                     <div class="thumbnail-fullwidth" data-toggle="modal" data-target="#modalWindow">
-                      <div class="thumbnail-fullwidth-left"><img src="img/barbers-8-400x480.jpg" alt="" width="400" height="480"/>
+                      <div class="thumbnail-fullwidth-left"><img src="/assets/img/barbers-8-400x480.jpg" alt="" width="400" height="480"/>
                       </div>
                       <div class="thumbnail-fullwidth-body">
                         <p class="thumbnail-fullwidth-header">Harry Anderson</p>
@@ -265,7 +265,7 @@
                       </div>
                     </div>
                     <div class="thumbnail-fullwidth" data-toggle="modal" data-target="#modalWindow">
-                      <div class="thumbnail-fullwidth-left"><img src="img/barbers-9-400x480.jpg" alt="" width="400" height="480"/>
+                      <div class="thumbnail-fullwidth-left"><img src="/assets/img/barbers-9-400x480.jpg" alt="" width="400" height="480"/>
                       </div>
                       <div class="thumbnail-fullwidth-body">
                         <p class="thumbnail-fullwidth-header">Matthew Phillips</p>
@@ -329,7 +329,7 @@
             <footer class="page-footer page-footer-default">
               <div class="shell">
                 <div class="range range-xs-center">
-                  <div class="cell-lg-10"><a class="brand" href="{{ route('index') }}.php"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a>
+                  <div class="cell-lg-10"><a class="brand" href="{{ route('index') }}.php"><img src="/assets/img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a>
                     <div class="text-highlighted-wrap">
                       <p class="text-highlighted">Barbershop is a No.1 place to have a men’s haircut in San Francisco. Here you can get luxury barber experience at a reasonable price.</p>
                     </div>
@@ -365,7 +365,7 @@
             <div class="rd-navbar-inner">
               <div class="rd-navbar-panel">
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                <div class="rd-navbar-brand"><a class="brand-name" href="{{ route('index') }}.php"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
+                <div class="rd-navbar-brand"><a class="brand-name" href="{{ route('index') }}.php"><img src="/assets/img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
               </div>
               <div class="rd-navbar-nav-wrap">
                 <div class="rd-navbar-nav-inner">
@@ -506,7 +506,7 @@
         <div class="custom-modal-content">
           <button class="close" type="button" data-dismiss="modal"></button>
           <div class="shell">
-            <div class="box-portfolio"><img class="box-portfolio-image" src="img/barbers-single-1-130x130.jpg" alt="" width="130" height="130"/>
+            <div class="box-portfolio"><img class="box-portfolio-image" src="/assets/img/barbers-single-1-130x130.jpg" alt="" width="130" height="130"/>
               <p class="box-portfolio-header">simon wilson</p>
               <div class="box-portfolio-text">
                 <p>Simon Wilson founded Barbershop in 2003 at the age of 23. He decided to establish a place where the long standing traditions of American barbering could be saved. He kept Barbershop a true place for men, their fathers, and sons, rather than converting it to a unisex salon as was the popular trend at the time. Over the past 13 years, Mr. Wilson has grown his shop from a small, local spot to a nationally and internationally recognized standard in the industry. Simon has been the recipient of various accolades including the HYPE Award for Entrepreneurs and the Hartford Business Journal's 40 Under Forty (Class of 2014). He can be found at the shop on Wednesdays and Fridays.</p>
@@ -556,7 +556,7 @@
         </div>
       </div>
     </div>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="/assets/js/core.min.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>

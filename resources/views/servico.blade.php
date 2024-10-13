@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono:300,300italic,400,700%7CArvo:400,700">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 		<!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="img/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
@@ -21,7 +21,7 @@
       <main class="page-content" id="perspective">
         <div class="content-wrapper">
           <div class="page-header page-header-perspective">
-            <div class="page-header-left"><a class="brand" href="{{route('index')}}"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
+            <div class="page-header-left"><a class="brand" href="{{route('index')}}"><img src="/assets/img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
             <div class="page-header-right">
               <div class="booking-control"><a class="btn btn-xs btn-circle btn-primary" href="step-1.php">BOOK NOW</a></div>
               <div id="perspective-open-menu" data-custom-toggle=".perspective-menu-toggle" data-custom-toggle-hide-on-blur="true"><span class="perspective-menu-text">Menu</span>
@@ -44,7 +44,7 @@
                   <p class="big">Barbershop offers world-class men's haircuts, beard grooming, and hot razor shaves. Here are just some of the services we are known for.</p>
                 </div>
                 <article class="box-service box-service-dark box-service-reverse">
-                  <div class="box-service-left"><img class="box-service-image" src="img/services-1-500x490.png" alt="" width="500" height="490"/>
+                  <div class="box-service-left"><img class="box-service-image" src="/assets/img/services-1-500x490.png" alt="" width="500" height="490"/>
                   </div>
                   <div class="box-service-body">
                     <div class="box-service-header">
@@ -58,7 +58,7 @@
                   </div>
                 </article>
                 <article class="box-service">
-                  <div class="box-service-left"><img class="box-service-image" src="img/services-2-500x490.png" alt="" width="500" height="490"/>
+                  <div class="box-service-left"><img class="box-service-image" src="/assets/img/services-2-500x490.png" alt="" width="500" height="490"/>
                   </div>
                   <div class="box-service-body">
                     <div class="box-service-header">
@@ -72,7 +72,7 @@
                   </div>
                 </article>
                 <article class="box-service box-service-dark box-service-reverse">
-                  <div class="box-service-left"><img class="box-service-image" src="img/services-3-500x490.png" alt="" width="500" height="490"/>
+                  <div class="box-service-left"><img class="box-service-image" src="/assets/img/services-3-500x490.png" alt="" width="500" height="490"/>
                   </div>
                   <div class="box-service-body">
                     <div class="box-service-header">
@@ -86,7 +86,7 @@
                   </div>
                 </article>
                 <article class="box-service">
-                  <div class="box-service-left"><img class="box-service-image" src="img/services-4-500x490.png" alt="" width="500" height="490"/>
+                  <div class="box-service-left"><img class="box-service-image" src="/assets/img/services-4-500x490.png" alt="" width="500" height="490"/>
                   </div>
                   <div class="box-service-body">
                     <div class="box-service-header">
@@ -114,28 +114,28 @@
                   <div class="cell-xs-12">
                     <div class="range range-30">
                       <div class="cell-xs-6 cell-md-3">
-                        <article class="card-service"><img class="card-service-image" src="img/icon-service-1-70x62.png" alt="" width="70" height="62"/>
+                        <article class="card-service"><img class="card-service-image" src="/assets/img/icon-service-1-70x62.png" alt="" width="70" height="62"/>
                           <p class="card-service-title">TRADITIONAL HAIRCUTS</p>
                           <p class="card-service-price"><small>$</small>39.<small>00</small>
                           </p><a class="btn btn-sm card-service-control" href="step-1.php">Book Now</a>
                         </article>
                       </div>
                       <div class="cell-xs-6 cell-md-3">
-                        <article class="card-service"><img class="card-service-image" src="img/icon-service-2-70x62.png" alt="" width="70" height="62"/>
+                        <article class="card-service"><img class="card-service-image" src="/assets/img/icon-service-2-70x62.png" alt="" width="70" height="62"/>
                           <p class="card-service-title">SHAVES</p>
                           <p class="card-service-price"><small>$</small>29.<small>00</small>
                           </p><a class="btn btn-sm card-service-control" href="step-1.php">Book Now</a>
                         </article>
                       </div>
                       <div class="cell-xs-6 cell-md-3">
-                        <article class="card-service"><img class="card-service-image" src="img/icon-service-3-70x62.png" alt="" width="70" height="62"/>
+                        <article class="card-service"><img class="card-service-image" src="/assets/img/icon-service-3-70x62.png" alt="" width="70" height="62"/>
                           <p class="card-service-title">beard trim</p>
                           <p class="card-service-price"><small>$</small>35.<small>00</small>
                           </p><a class="btn btn-sm card-service-control" href="step-1.php">Book Now</a>
                         </article>
                       </div>
                       <div class="cell-xs-6 cell-md-3">
-                        <article class="card-service"><img class="card-service-image" src="img/icon-service-4-70x62.png" alt="" width="70" height="62"/>
+                        <article class="card-service"><img class="card-service-image" src="/assets/img/icon-service-4-70x62.png" alt="" width="70" height="62"/>
                           <p class="card-service-title">Mustache trim</p>
                           <p class="card-service-price"><small>$</small>32.<small>00</small>
                           </p><a class="btn btn-sm card-service-control" href="step-1.php">Book Now</a>
@@ -150,7 +150,7 @@
             <footer class="page-footer page-footer-default">
               <div class="shell">
                 <div class="range range-xs-center">
-                  <div class="cell-lg-10"><a class="brand" href="{{route('index')}}"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a>
+                  <div class="cell-lg-10"><a class="brand" href="{{route('index')}}"><img src="/assets/img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a>
                     <div class="text-highlighted-wrap">
                       <p class="text-highlighted">Barbershop is a No.1 place to have a men’s haircut in San Francisco. Here you can get luxury barber experience at a reasonable price.</p>
                     </div>
@@ -186,7 +186,7 @@
             <div class="rd-navbar-inner">
               <div class="rd-navbar-panel">
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                <div class="rd-navbar-brand"><a class="brand-name" href="{{route('index')}}"><img src="img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
+                <div class="rd-navbar-brand"><a class="brand-name" href="{{route('index')}}"><img src="/assets/img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
               </div>
               <div class="rd-navbar-nav-wrap">
                 <div class="rd-navbar-nav-inner">
@@ -357,7 +357,7 @@
         </div>
       </div>
     </div>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="/assets/js/core.min.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
