@@ -69,8 +69,15 @@ Route::get('/dashboard', function () {
     return view('adm_dashboard.dashboard');
 })->name('dashboard');
 
+
 Route::get('/tabelas', [UserClienteController::class, 'index_cliente'])->name('tabelas');
 Route::post('/tabelas', [UserClienteController::class, 'IncluirCliente']);
 Route::post('/tabelas/upd/{id}', [UserClienteController::class, 'ExecutarAlteracao'])->name('tabelas.upd');
 Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente'])->name('tabelas_ex');
 Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlterar'])->name('tabelas_upd');
+
+Route::get('/perfil',[UserAdmController::class, 'index_adm'])->name('perfil');
+Route::post('/perfil', [UserAdmController::class, 'IncluirAdm']);
+Route::post('/perfil/upd/{id}', [UserAdmController::class, 'ExecutarAlteracao'])->name('perfil.upd');
+Route::get('/perfil/exc/{id}', [UserAdmController::class, 'ExcluirCliente'])->name('perfil_ex');
+Route::get('/perfil/upd/{id}', [UserAdmController::class, 'BuscarAlterar'])->name('perfil_upd');

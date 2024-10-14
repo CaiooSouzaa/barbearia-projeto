@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name_adm');
             $table->string('senha_adm');
+            $table->string('telefone_adm');
+            $table->string('email_adm');
+            $table->string('localizacao_adm');
             $table->boolean('user_ativo')->default(1);
             $table->timestamps();
         });

@@ -3,27 +3,37 @@
 @section('conteudo')
     <style>
         h1 {
-            font-size: 32px; /* Aumenta o tamanho do título */
-            text-align: center; /* Centraliza o título */
+            font-size: 32px;
+            /* Aumenta o tamanho do título */
+            text-align: center;
+            /* Centraliza o título */
         }
 
         .breadcrumb-item {
-            font-size: 18px; /* Aumenta o tamanho das entradas do breadcrumb */
+            font-size: 18px;
+            /* Aumenta o tamanho das entradas do breadcrumb */
         }
 
-        .card-header, .card-body, label, input {
-            font-size: 18px; /* Aumenta o tamanho do texto geral */
+        .card-header,
+        .card-body,
+        label,
+        input {
+            font-size: 18px;
+            /* Aumenta o tamanho do texto geral */
         }
 
         .btn {
-            font-size: 16px; /* Aumenta o tamanho do texto dos botões */
+            font-size: 16px;
+            /* Aumenta o tamanho do texto dos botões */
         }
 
         /* Estilizando o formulário para ficar centralizado */
         .form-floating {
             width: 100%;
-            max-width: 500px; /* Limita o tamanho do formulário */
-            margin: 0 auto; /* Centraliza horizontalmente */
+            max-width: 500px;
+            /* Limita o tamanho do formulário */
+            margin: 0 auto;
+            /* Centraliza horizontalmente */
         }
 
         /* Estilizando a tabela */
@@ -34,19 +44,23 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .table th, .table td {
+        .table th,
+        .table td {
             vertical-align: middle;
             text-align: center;
             padding: 10px;
         }
 
         .form-control {
-            transition: all 0.3s ease; /* Animação ao focar no campo */
+            transition: all 0.3s ease;
+            /* Animação ao focar no campo */
         }
 
         .form-control:focus {
-            border-color: #5bc0de; /* Cor do campo ao ser focado */
-            box-shadow: 0 0 5px rgba(91, 192, 222, 0.5); /* Efeito de sombra ao focar */
+            border-color: #5bc0de;
+            /* Cor do campo ao ser focado */
+            box-shadow: 0 0 5px rgba(91, 192, 222, 0.5);
+            /* Efeito de sombra ao focar */
         }
 
         /* Estilizando a animação de foco */
@@ -54,9 +68,11 @@
             transition: all 0.3s ease;
         }
 
-        .form-control:focus + label {
-            color: #5bc0de; /* Muda a cor do rótulo ao focar */
-            transform: translateY(-18px) scale(0.85); /* Muda a posição e tamanho do rótulo */
+        .form-control:focus+label {
+            color: #5bc0de;
+            /* Muda a cor do rótulo ao focar */
+            transform: translateY(-18px) scale(0.85);
+            /* Muda a posição e tamanho do rótulo */
         }
 
         .card {
@@ -98,7 +114,7 @@
                                 <td>
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="name_cliente" id="name_cliente"
-                                               placeholder="Digite o nome" value="{{ $cliente->name_cliente }}"/>
+                                            placeholder="Digite o nome" value="{{ $cliente->name_cliente }}" />
                                     </div>
                                 </td>
                             </tr>
@@ -110,7 +126,7 @@
                                 <td>
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente"
-                                               placeholder="Digite o CPF" value="{{ $cliente->cpf_cliente }}"/>
+                                            placeholder="Digite o CPF" value="{{ $cliente->cpf_cliente }}" />
                                     </div>
                                 </td>
                             </tr>
@@ -122,7 +138,7 @@
                                 <td>
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="numero_cliente" id="numero_cliente"
-                                               placeholder="Digite o telefone" value="{{ $cliente->numero_cliente }}"/>
+                                            placeholder="Digite o telefone" value="{{ $cliente->numero_cliente }}" />
                                     </div>
                                 </td>
                             </tr>
@@ -130,7 +146,8 @@
                 </table>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="window.location.href='{{ route('tabelas') }}'">Cancelar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        onclick="window.location.href='{{ route('tabelas') }}'">Cancelar</button>
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
                 </form>

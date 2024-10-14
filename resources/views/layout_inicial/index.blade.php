@@ -34,11 +34,11 @@
                             <button class="rd-navbar-toggle"
                                 data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                             <div class="rd-navbar-brand"><a class="brand-name" href="{{ route('index') }}">
-                                    <div class="brand-mobile"><img src="/assets/img/logo-default-dark-200x36.png" alt=""
-                                            width="200" height="36" />
+                                    <div class="brand-mobile"><img src="/assets/img/logo-default-dark-200x36.png"
+                                            alt="" width="200" height="36" />
                                     </div>
-                                    <div class="brand-desktop"><img src="/assets/img/logo-big-dark-125x125.png" alt=""
-                                            width="125" height="125" />
+                                    <div class="brand-desktop"><img src="/assets/img/logo-big-dark-125x125.png"
+                                            alt="" width="125" height="125" />
                                     </div>
                                 </a></div>
                         </div>
@@ -70,7 +70,7 @@
                         <div class="cell-sm-9 cell-md-8 cell-lg-7">
                             <h1>Aproveite nossos serviços de barbeiro</h1>
                             <p class="large">Estabeleça um novo visual incrível com nossos serviços de barbeiro.</p><a
-                                class="btn btn-style-1 btn-primary" href="step-1.php">RESERVE AGORA</a>
+                                class="btn btn-style-1 btn-primary" href="https://t.me/BarbershopAgendamento_Bot">RESERVE AGORA</a>
                         </div>
                     </div>
                 </div>
@@ -93,18 +93,18 @@
                     <div class="cell-md-7 cell-lg-6">
                         <div class="row row-gutter-custom range-15">
                             <div class="col-xs-4">
-                                <figure class="figure-fullwidth"><img src="/assets/img/about-1-300x460.jpg" alt=""
-                                        width="300" height="460" />
+                                <figure class="figure-fullwidth"><img src="/assets/img/about-1-300x460.jpg"
+                                        alt="" width="300" height="460" />
                                 </figure>
                             </div>
                             <div class="col-xs-4">
-                                <figure class="figure-fullwidth"><img src="/assets/img/about-2-300x460.jpg" alt=""
-                                        width="300" height="460" />
+                                <figure class="figure-fullwidth"><img src="/assets/img/about-2-300x460.jpg"
+                                        alt="" width="300" height="460" />
                                 </figure>
                             </div>
                             <div class="col-xs-4">
-                                <figure class="figure-fullwidth"><img src="/assets/img/about-3-300x460.jpg" alt=""
-                                        width="300" height="460" />
+                                <figure class="figure-fullwidth"><img src="/assets/img/about-3-300x460.jpg"
+                                        alt="" width="300" height="460" />
                                 </figure>
                             </div>
                         </div>
@@ -132,8 +132,9 @@
                             <div class="range range-condensed range-inner-bordered">
                                 <div class="cell-xs-6">
                                     <article class="box-icon">
-                                        <figure class="box-icon-image"><img src="/assets/img/icon-service-light-3-70x62.png"
-                                                alt="" width="70" height="62" />
+                                        <figure class="box-icon-image"><img
+                                                src="/assets/img/icon-service-light-3-70x62.png" alt=""
+                                                width="70" height="62" />
                                         </figure>
                                         <p class="box-icon-header">Aparar BARBA</p>
                                         <p class="box-icon-text">Uma barba bem aparada é um elemento indispensável na
@@ -142,8 +143,9 @@
                                 </div>
                                 <div class="cell-xs-6">
                                     <article class="box-icon">
-                                        <figure class="box-icon-image"><img src="/assets/img/icon-service-light-4-70x62.png"
-                                                alt="" width="70" height="62" />
+                                        <figure class="box-icon-image"><img
+                                                src="/assets/img/icon-service-light-4-70x62.png" alt=""
+                                                width="70" height="62" />
                                         </figure>
                                         <p class="box-icon-header">APARAR BIGODE</p>
                                         <p class="box-icon-text">Os bigodes também precisam ser aparados regularmente
@@ -152,8 +154,9 @@
                                 </div>
                                 <div class="cell-xs-6">
                                     <article class="box-icon">
-                                        <figure class="box-icon-image"><img src="/assets/img/icon-service-light-1-70x62.png"
-                                                alt="" width="70" height="62" />
+                                        <figure class="box-icon-image"><img
+                                                src="/assets/img/icon-service-light-1-70x62.png" alt=""
+                                                width="70" height="62" />
                                         </figure>
                                         <p class="box-icon-header">CORTES DE CABELO TRADICIONAIS</p>
                                         <p class="box-icon-text">Um dos serviços mais populares que nossos barbeiros
@@ -162,8 +165,9 @@
                                 </div>
                                 <div class="cell-xs-6">
                                     <article class="box-icon">
-                                        <figure class="box-icon-image"><img src="/assets/img/icon-service-light-2-70x62.png"
-                                                alt="" width="70" height="62" />
+                                        <figure class="box-icon-image"><img
+                                                src="/assets/img/icon-service-light-2-70x62.png" alt=""
+                                                width="70" height="62" />
                                         </figure>
                                         <p class="box-icon-header">BARBEAR</p>
                                         <p class="box-icon-text">Nossos serviços de barbear farão você ficar realmente
@@ -450,7 +454,8 @@
                 <button class="close" type="button" data-dismiss="modal"></button>
                 <div class="shell">
                     <div class="box-portfolio"><img class="box-portfolio-image"
-                            src="/assets/img/barbers-single-1-130x130.jpg" alt="" width="130" height="130" />
+                            src="/assets/img/barbers-single-1-130x130.jpg" alt="" width="130"
+                            height="130" />
                         <p class="box-portfolio-header">simon wilson</p>
                         <div class="box-portfolio-text">
                             <p>Simon Wilson founded Barbershop in 2003 at the age of 23. He decided to establish a place
