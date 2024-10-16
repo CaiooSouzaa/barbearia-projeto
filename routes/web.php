@@ -79,5 +79,5 @@ Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlterar'])
 Route::get('/perfil',[UserAdmController::class, 'index_adm'])->name('perfil');
 Route::post('/perfil', [UserAdmController::class, 'IncluirAdm']);
 Route::post('/perfil/upd/{id}', [UserAdmController::class, 'ExecutarAlteracao'])->name('perfil.upd');
-Route::get('/perfil/exc/{id}', [UserAdmController::class, 'ExcluirCliente'])->name('perfil_ex');
+Route::get('/perfil/exc/{id}', [UserAdmController::class, 'ExcluirAdm'])->name('perfil_ex');
 Route::get('/perfil/upd/{id}', [UserAdmController::class, 'BuscarAlterar'])->name('perfil_upd');
