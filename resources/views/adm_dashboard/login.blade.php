@@ -41,34 +41,30 @@
                         <div class="card z-index-0 fadeIn3 fadeInBottom">
                             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                                 <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                                    <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Registrar</h4>
+                                    <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Login</h4>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <form role="form" class="text-start" method="POST" action="{{ route('register') }}">
+
+                                <form role="form" class="text-start" method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <div class="input-group input-group-outline my-3">
-                                        <label class="form-label">Nome usuario</label>
-                                        <input type="text" class="form-control" name="name" id="name" required>
+                                        <label class="form-label">Usuario</label>
+                                        <input type="email" class="form-control" name="email" required>
                                     </div>
-                                    <div class="input-group input-group-outline my-3">
-                                        <label class="form-label">Email</label>
-                                        <input type="email" class="form-control" name="email" id="email" required>
-                                    </div>
-                                
                                     <div class="input-group input-group-outline mb-3">
                                         <label class="form-label">Senha</label>
-                                        <input type="password" class="form-control" name="password" id="password" required>
-                                    </div>
-                                    <div class="input-group input-group-outline mb-3">
-                                        <label class="form-label">Confirme a senha</label>
-                                        <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" required>
+                                        <input type="password" class="form-control" name="password" required>
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Registrar</button>
+                                        <button type="submit"
+                                            class="btn bg-gradient-primary w-100 my-4 mb-2">Entrar</button>
                                     </div>
+                                    <p class="mt-4 text-sm text-center">
+                                        <a href="{{route('register')}}"
+                                            class="text-primary text-gradient font-weight-bold">Cadastrar</a>
+                                    </p>
                                 </form>
-                                
                             </div>
                         </div>
                     </div>
@@ -101,7 +97,7 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="/assets/js/material-dashboard.min.js?v=3.1.0"></script>
+    <script src="../assets/js/material-dashboard.min.js?v=3.1.0"></script>
 </body>
 
 </html>

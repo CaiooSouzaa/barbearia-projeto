@@ -91,22 +91,22 @@ Route::get('/perfil/upd/{id}', [UserAdmController::class, 'BuscarAlterar'])->nam
 //Parte de login
 // web.php
 
-Route::get('/login_adm', function() {
-    return view('adm_dashboard.login_adm');
-})->name('login_adm');
-Route::post('/login_adm', [AuthController::class, 'login']);
+// Rotas públicas para login e registro
+Route::get('/login', function() {
+    return view('adm_dashboard.login');
+})->name('login');
+Route::post('/login', [AuthController::class, 'login']);
 
-
-Route::post('/cadastrar_adm', [AuthController::class, 'register'])->name('cadastrar_adm');
-Route::get('/cadastrar_adm', function() {
-    return view('adm_dashboard.cadastrar_adm');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::get('/register', function() {
+    return view('adm_dashboard.register');
 });
 
-//Rotas de segurança
-Route::middleware('auth')->group(function () {
-    Route::get('/login', function () {
-        return view("adm_dashboard.login_adm");
-    })->name('login');
+// Rota de logout
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
-    //Route::get('/categoria', [Categoria::class, 'index'])->name('categoria');
+// Rotas protegidas
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [AuthController::class, 'index'])->name('dashboard');
+    // Outras rotas protegidas
 });

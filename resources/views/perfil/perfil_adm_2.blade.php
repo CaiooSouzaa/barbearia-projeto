@@ -1,6 +1,13 @@
 @extends('perfil.perfil_adm')
+
 @section('perfilAdm')
-    @foreach ($administrador as $linhasAdm)
+    @php
+        // Obtendo o administrador autenticado
+        $linhasAdm = Auth::user(); // Para usar o guard padrão
+; // Use o guard correto para administradores
+    @endphp
+
+    @if ($linhasAdm)
         <div class="card card-body mx-3 mx-md-4 mt-n6">
             <div class="row gx-4 mb-2">
                 <div class="col-auto">
@@ -12,7 +19,7 @@
                 <div class="col-auto my-auto">
                     <div class="h-100">
                         <h5 class="mb-1">
-                            {{ $linhasAdm->name_adm }}
+                            {{ $linhasAdm->name  }}
                         </h5>
                         <p class="mb-0 font-weight-normal text-sm">
                             {{ $linhasAdm->id }}
@@ -38,27 +45,23 @@
                                 </div>
                             </div>
                             <div class="card-body p-3">
-                                <table>
-
-                                    <ul class="list-group">
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong
-                                                class="text-dark">Nome Completo:</strong> &nbsp;
-                                            {{ $linhasAdm->name_adm }}</li>
-                                        <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                                class="text-dark">Telefone:</strong>
-                                            &nbsp; {{ $linhasAdm->telefone_adm }}</li>
-                                        <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                                class="text-dark">Email:</strong>
-                                            &nbsp; {{ $linhasAdm->email_adm }}</li>
-                                        <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                                class="text-dark">Localização:</strong> &nbsp;
-                                            {{ $linhasAdm->localizacao_adm }}</li>
-                                    </ul>
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0 ps-0 pt-0 text-sm">
+                                        <strong class="text-dark">Nome Completo:</strong> &nbsp;
+                                        {{ $linhasAdm->name }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Email:</strong> &nbsp;
+                                        {{ $linhasAdm->email }}
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    @endforeach
-@endsection     
+    @else
+        <p>Nenhum administrador logado. Por favor, faça login.</p>
+    @endif
+@endsection
