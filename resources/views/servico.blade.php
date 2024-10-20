@@ -2,7 +2,7 @@
 <html class="wide wow-animation" lang="en">
   <head>
     <!-- Site Title-->
-    <title>Services</title>
+    <title>Serviços</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,38 +22,33 @@
         <div class="content-wrapper">
           <div class="page-header page-header-perspective">
             <div class="page-header-left"><a class="brand" href="{{route('index')}}"><img src="/assets/img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a></div>
-            <div class="page-header-right">
-              <div class="booking-control"><a class="btn btn-xs btn-circle btn-primary" href="step-1.php">BOOK NOW</a></div>
-              <div id="perspective-open-menu" data-custom-toggle=".perspective-menu-toggle" data-custom-toggle-hide-on-blur="true"><span class="perspective-menu-text">Menu</span>
-                <button class="perspective-menu-toggle"><span></span></button>
-              </div>
-            </div>
+            
           </div>
           <div id="wrapper">
             <div class="page-title">
               <div class="page-title-content">
                 <div class="shell">
-                  <p class="page-title-header">Services</p>
+                  <p class="page-title-header">Serviços</p>
                 </div>
               </div>
             </div>
             <section class="section-xl bg-periglacial-blue text-center">
               <div class="shell">
-                <h2>Our Services 1</h2>
+
                 <div class="p text-width-medium">
-                  <p class="big">Barbershop offers world-class men's haircuts, beard grooming, and hot razor shaves. Here are just some of the services we are known for.</p>
+                  <p class="big">A barbearia oferece cortes de cabelo masculinos de classe mundial, tratamento de barba e barbear com navalha quente. Aqui estão apenas alguns dos serviços pelos quais somos conhecidos.</p>
                 </div>
                 <article class="box-service box-service-dark box-service-reverse">
                   <div class="box-service-left"><img class="box-service-image" src="/assets/img/services-1-500x490.png" alt="" width="500" height="490"/>
                   </div>
                   <div class="box-service-body">
                     <div class="box-service-header">
-                      <p class="box-service-title">TRADITIONAL HAIRCUTS</p>
+                      <p class="box-service-title">CORTES DE CABELO TRADICIONAIS</p>
                       <p class="box-service-price"><small>$</small>39.<small>00</small>
                       </p>
                     </div>
                     <div class="box-service-text">
-                      <p>This classic and traditional service is perfect if you want your hair to be done the right way. Our barbers will be glad to help you with it. </p>
+                      <p>Este serviço clássico e tradicional é perfeito se você quer que seu cabelo fique bem penteado. Nossos barbeiros terão prazer em ajudá-lo com isso.</p>
                     </div><a class="btn btn-sm box-service-control" href="step-1.php">Book Now</a>
                   </div>
                 </article>
@@ -62,12 +57,12 @@
                   </div>
                   <div class="box-service-body">
                     <div class="box-service-header">
-                      <p class="box-service-title">Beard SHAVE</p>
+                      <p class="box-service-title">Barba</p>
                       <p class="box-service-price"><small>$</small>29.<small>00</small>
                       </p>
                     </div>
                     <div class="box-service-text">
-                      <p>Beard shave is one of our most popular services. It is a must for all men who want to have a beard that looks stunning.</p>
+                      <p>O barbear é um dos nossos serviços mais populares. É obrigatório para todos os homens que desejam ter uma barba deslumbrante.</p>
                     </div><a class="btn btn-sm box-service-control" href="step-1.php">Book Now</a>
                   </div>
                 </article>
@@ -76,12 +71,12 @@
                   </div>
                   <div class="box-service-body">
                     <div class="box-service-header">
-                      <p class="box-service-title">Mustache trim</p>
+                      <p class="box-service-title">Bigode</p>
                       <p class="box-service-price"><small>$</small>32.<small>00</small>
                       </p>
                     </div>
                     <div class="box-service-text">
-                      <p>Mustaches are a classic facial hair choice for men, and they never seem to go out of style for long. With us, you can keep your mustache groomed.</p>
+                      <p>Os bigodes são uma escolha clássica de pelos faciais para os homens e parecem nunca sair de moda por muito tempo. Conosco, você pode manter seu bigode bem cuidado.</p>
                     </div><a class="btn btn-sm box-service-control" href="step-1.php">Book Now</a>
                   </div>
                 </article>
@@ -90,12 +85,12 @@
                   </div>
                   <div class="box-service-body">
                     <div class="box-service-header">
-                      <p class="box-service-title">BEARD TRIM</p>
+                      <p class="box-service-title">Corte completo</p>
                       <p class="box-service-price"><small>$</small>35.<small>00</small>
                       </p>
                     </div>
                     <div class="box-service-text">
-                      <p>Today beards require more tailoring than in earlier days. That’s why we believe our beard trim service may be useful for you.</p>
+                      <p>Hoje as barbas exigem mais alfaiataria do que antigamente. É por isso que acreditamos que nosso serviço de aparar barba pode ser útil para você.</p>
                     </div><a class="btn btn-sm box-service-control" href="step-1.php">Book Now</a>
                   </div>
                 </article>
@@ -106,39 +101,37 @@
               <div class="shell">
                 <div class="range range-sm-center range-50">
                   <div class="cell-xs-12">
-                    <h2>OUR SERVICES 2</h2>
+                    <h2>Demais serviços</h2>
                     <div class="p text-width-medium">
-                      <p class="big">Barbershop offers world-class men's haircuts, beard grooming, and hot razor shaves. Here are just some of the services we are known for.</p>
+                      <p class="big">A barbearia oferece cortes de cabelo masculinos de classe mundial, tratamento de barba e barbear com navalha quente. Aqui estão apenas alguns dos serviços pelos quais somos conhecidos.</p>
                     </div>
                   </div>
                   <div class="cell-xs-12">
                     <div class="range range-30">
                       <div class="cell-xs-6 cell-md-3">
                         <article class="card-service"><img class="card-service-image" src="/assets/img/icon-service-1-70x62.png" alt="" width="70" height="62"/>
-                          <p class="card-service-title">TRADITIONAL HAIRCUTS</p>
+                          <p class="card-service-title">Corte tradicional</p>
                           <p class="card-service-price"><small>$</small>39.<small>00</small>
-                          </p><a class="btn btn-sm card-service-control" href="step-1.php">Book Now</a>
+                          
                         </article>
                       </div>
                       <div class="cell-xs-6 cell-md-3">
                         <article class="card-service"><img class="card-service-image" src="/assets/img/icon-service-2-70x62.png" alt="" width="70" height="62"/>
-                          <p class="card-service-title">SHAVES</p>
+                          <p class="card-service-title">Navalha</p>
                           <p class="card-service-price"><small>$</small>29.<small>00</small>
-                          </p><a class="btn btn-sm card-service-control" href="step-1.php">Book Now</a>
+            
                         </article>
                       </div>
                       <div class="cell-xs-6 cell-md-3">
                         <article class="card-service"><img class="card-service-image" src="/assets/img/icon-service-3-70x62.png" alt="" width="70" height="62"/>
-                          <p class="card-service-title">beard trim</p>
+                          <p class="card-service-title">Barba</p>
                           <p class="card-service-price"><small>$</small>35.<small>00</small>
-                          </p><a class="btn btn-sm card-service-control" href="step-1.php">Book Now</a>
                         </article>
                       </div>
                       <div class="cell-xs-6 cell-md-3">
                         <article class="card-service"><img class="card-service-image" src="/assets/img/icon-service-4-70x62.png" alt="" width="70" height="62"/>
-                          <p class="card-service-title">Mustache trim</p>
-                          <p class="card-service-price"><small>$</small>32.<small>00</small>
-                          </p><a class="btn btn-sm card-service-control" href="step-1.php">Book Now</a>
+                          <p class="card-service-title">Bigode</p>
+
                         </article>
                       </div>
                     </div>
@@ -152,7 +145,7 @@
                 <div class="range range-xs-center">
                   <div class="cell-lg-10"><a class="brand" href="{{route('index')}}"><img src="/assets/img/logo-default-dark-200x36.png" alt="" width="200" height="36"/></a>
                     <div class="text-highlighted-wrap">
-                      <p class="text-highlighted">Barbershop is a No.1 place to have a men’s haircut in San Francisco. Here you can get luxury barber experience at a reasonable price.</p>
+                      <p class="text-highlighted">A barbearia é o lugar número 1 para cortes de cabelo masculinos em São Francisco. Aqui você pode obter uma experiência de barbeiro de luxo a um preço razoável.</p>
                     </div>
                     <ul class="footer-navigation footer-navigation-horizontal">
                       <li><a href="{{ route('index') }}">Home</a>

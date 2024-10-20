@@ -51,9 +51,9 @@
                                     </li>
                                     <li><a href="{{ route('servico') }}">serviços</a>
                                     </li>
-                                    <li><a href="{{ route('agendamento') }}">Agendamento</a>
+                                    <li><a target="_blank" href="https://t.me/BarbershopAgendamento_Bot">Agendamento</a>
                                     </li>
-                                    <li><a href="{{ route('login') }}">Login/Registrar</a>
+                                    <li><a href="{{ route('login_adm') }}">Login/Registrar</a>
                                     </li>
                                 </ul>
                             </div>
