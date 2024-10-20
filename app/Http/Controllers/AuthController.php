@@ -13,7 +13,7 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         // Validação dos dados
-        
+
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -58,11 +58,11 @@ class AuthController extends Controller
 
     public function showRegisterForm()
     {
-        return view('register.cadastrar_adm'); // Certifique-se de que você tenha uma view chamada 'register' em 'resources/views/auth/register.blade.php'
+        return view('adm_dashboard.cadastrar_adm'); // Certifique-se de que você tenha uma view chamada 'register' em 'resources/views/auth/register.blade.php'
     }
 
     public function showLoginForm()
     {
-        return view('login.login_adm'); // Certifique-se de que você tenha uma view chamada 'login' em 'resources/views/auth/login.blade.php'
+        return view('adm_dashboard.login_adm'); // Certifique-se de que você tenha uma view chamada 'login' em 'resources/views/auth/login.blade.php'
     }
 }

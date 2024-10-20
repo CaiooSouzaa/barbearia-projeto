@@ -91,21 +91,21 @@ Route::get('/perfil/upd/{id}', [UserAdmController::class, 'BuscarAlterar'])->nam
 //Parte de login
 // web.php
 
-Route::get('/login', function() {
-    return view('login.login_adm');
-})->name('login');
-Route::post('/login', [AuthController::class, 'login']);
+Route::get('/login_adm', function() {
+    return view('adm_dashboard.login_adm');
+})->name('login_adm');
+Route::post('/login_adm', [AuthController::class, 'login']);
 
 
-Route::post('/register', [AuthController::class, 'register'])->name('register');
-Route::get('/register', function() {
-    return view('register.cadastrar_adm');
+Route::post('/cadastrar_adm', [AuthController::class, 'register'])->name('cadastrar_adm');
+Route::get('/cadastrar_adm', function() {
+    return view('adm_dashboard.cadastrar_adm');
 });
 
 //Rotas de segurança
 Route::middleware('auth')->group(function () {
     Route::get('/login', function () {
-        return view("login");
+        return view("adm_dashboard.login_adm");
     })->name('login');
 
     //Route::get('/categoria', [Categoria::class, 'index'])->name('categoria');
