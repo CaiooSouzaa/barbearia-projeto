@@ -1,12 +1,11 @@
-    <?php
+<?php
 
+namespace App\Http\Controllers;
 
-    namespace App\Http\Controllers;
-
-    use Illuminate\Http\Request;
-    use App\Models\User;
-    use Illuminate\Support\Facades\Hash;
-    use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
     class AuthController extends Controller
     {
@@ -43,12 +42,13 @@
             ]);
 
             // Verificar as credenciais e autenticar o usuário
-            if (Auth::guard('admin')->attempt($credentials)) {
+            if (Auth::attempt($credentials)) {
+                
                 // Login bem-sucedido
                 $request->session()->regenerate();
                 return redirect()->intended('dashboard')->with('success', 'Login bem-sucedido!');
             }
-            
+
 
             // Se as credenciais estiverem erradas
             return back()->withErrors([

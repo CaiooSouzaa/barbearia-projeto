@@ -25,11 +25,12 @@ return [
             'provider' => 'users',
         ],
 
-        'user' => [ // Adicione este guard
+        'user' => [
             'driver' => 'session',
-            'provider' => 'users', // O mesmo provider que você já tem para usuários
+            'provider' => 'users',
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -40,9 +41,10 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
+            'model' => App\Models\User::class,
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------

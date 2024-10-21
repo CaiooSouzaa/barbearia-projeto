@@ -22,25 +22,9 @@ Route::get('/checkot', function () {
     return view('checkout');
 })->name('checkot');
 
-Route::get('/contacts-2', function () {
-    return view('contacts-2');
-})->name('contacts-2');
 
-Route::get('/finish', function () {
-    return view('finish');
-})->name('finish');
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
 
-Route::get('/privacy-policy', function () {
-    return view('privacy-policy');
-})->name('privacy-policy');
-
-Route::get('/progress-bars', function () {
-    return view('progress-bars');
-})->name('progess-bars');
 
 Route::get('/servico', function () {
     return view('servico');
@@ -50,17 +34,10 @@ Route::get('/shop', function () {
     return view('shop');
 })->name('shop');
 
-Route::get('/single-product', function () {
-    return view('single-product');
-})->name('sigle-product');
 
 Route::get('/sobre-barbeiros', function () {
     return view('sobre-barbeiros');
 })->name('sobre-barbeiros');
-
-Route::get('/testimonials', function () {
-    return view('testimonials');
-});
 
 Route::get('/login2', function () {
     return view('login2');
@@ -69,10 +46,6 @@ Route::get('/login2', function () {
 Route::get('/dashboard', function () {
     return view('adm_dashboard.dashboard');
 })->name('dashboard');
-
-Route::get('/login_adm', function(){
-    return view('login.login_adm');
-})->name('login_adm');
 
 //parte de criação, alteração e exclução de usuarios
 Route::get('/tabelas', [UserClienteController::class, 'index_cliente'])->name('tabelas');
@@ -90,13 +63,12 @@ Route::get('/perfil/upd/{id}', [UserAdmController::class, 'BuscarAlterar'])->nam
 
 //Parte de login
 // web.php
-
-// Rotas públicas para login e registro
+// Rotas para login e registro
 Route::get('/login', function() {
     return view('adm_dashboard.login');
 })->name('login');
-Route::post('/login', [AuthController::class, 'login']);
 
+Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/register', function() {
     return view('adm_dashboard.register');
@@ -105,8 +77,9 @@ Route::get('/register', function() {
 // Rota de logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
+
 // Rotas protegidas
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', [AuthController::class, 'index'])->name('dashboard');
-    // Outras rotas protegidas
+    Route::get('/dashboard', [AuthController::class, 'login'])->name('dashboard');
 });
+

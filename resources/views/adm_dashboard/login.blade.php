@@ -45,6 +45,15 @@
                                 </div>
                             </div>
                             <div class="card-body">
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
 
                                 <form role="form" class="text-start" method="POST" action="{{ route('login') }}">
                                     @csrf
@@ -61,7 +70,7 @@
                                             class="btn bg-gradient-primary w-100 my-4 mb-2">Entrar</button>
                                     </div>
                                     <p class="mt-4 text-sm text-center">
-                                        <a href="{{route('register')}}"
+                                        <a href="{{ route('register') }}"
                                             class="text-primary text-gradient font-weight-bold">Cadastrar</a>
                                     </p>
                                 </form>
