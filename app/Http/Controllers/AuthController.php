@@ -7,75 +7,114 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
-    class AuthController extends Controller
+class AuthController extends Controller
+{
+    public function register(Request $request)
     {
-        public function register(Request $request)
-        {
-            // Validação dos dados
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
 
-            $validatedData = $request->validate([
-                'name' => 'required|string|max:255',
-                'email' => 'required|string|email|max:255|unique:users',
-                'password' => 'required|string|min:8|confirmed',
-            ]);
+        $user = User::create([
+            'name' => $validatedData['name'],
+            'email' => $validatedData['email'],
+            'password' => Hash::make($validatedData['password']),
+        ]);
 
-            // Criação do usuário
-            $user = User::create([
-                'name' => $validatedData['name'],
-                'email' => $validatedData['email'],
-                'password' => Hash::make($validatedData['password']),
-            ]);
+        Auth::login($user);
 
-            // Autenticar o usuário
-            Auth::login($user);
+        return redirect()->route('dashboard')->with('success', 'Registro concluído com sucesso!');
+    }
 
-            // Redirecionar ou retornar uma resposta
-            return redirect()->route('dashboard')->with('success', 'Registro concluído com sucesso!');
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('dashboard')->with('success', 'Login bem-sucedido!');
         }
 
-        public function login(Request $request)
-        {
-            // Validação dos dados
-            $credentials = $request->validate([
-                'email' => 'required|string|email',
-                'password' => 'required|string',
-            ]);
+        return back()->withErrors([
+            'email' => 'As credenciais fornecidas estão incorretas.',
+        ]);
+    }
 
-            // Verificar as credenciais e autenticar o usuário
-            if (Auth::attempt($credentials)) {
-                
-                // Login bem-sucedido
-                $request->session()->regenerate();
-                return redirect()->intended('dashboard')->with('success', 'Login bem-sucedido!');
+    public function showRegisterForm()
+    {
+        return view('adm_dashboard.register');
+    }
+
+    public function showLoginForm()
+    {
+        return view('adm_dashboard.login');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login')->with('success', 'Você saiu com sucesso!');
+    }
+
+    public function index()
+    {
+        return view('adm_dashboard.dashboard');
+    }
+
+    public function ExcluirAdm($id)
+    {
+        $user = Auth::find($id);
+
+        if ($user) {
+            $user->user_ativo = 0;
+            $user->save();
+            return redirect('/perfil')->with('success', 'Administrador excluído com sucesso!');
+        }
+
+        return redirect('/perfil')->with('error', 'Usuário não encontrado.');
+    }
+
+    public function BuscarAlterar($id)
+    {
+        $administrador = Auth::find($id);
+
+        if ($administrador) {
+            return view('perfil.perfil_editar', compact('administrador'));
+        }
+
+        return redirect('/perfil')->with('error', 'Usuário não encontrado.');
+    }
+
+    public function ExecutarAlteracao(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string|min:8',
+        ]);
+
+        $user = Auth::find($request->input('id'));
+
+        if ($user) {
+            $user->name = $request->input('name');
+            $user->email = $request->input('email_adm');
+
+            if ($request->input('senha_adm')) {
+                $user->password = Hash::make($request->input('senha_adm'));
             }
 
+            $user->save();
 
-            // Se as credenciais estiverem erradas
-            return back()->withErrors([
-                'email' => 'As credenciais fornecidas estão incorretas.',
-            ]);
+            return redirect('/perfil')->with('success', 'Dados atualizados com sucesso!');
         }
 
-        public function showRegisterForm()
-        {
-            return view('adm_dashboard.register'); // Certifique-se de que você tenha uma view chamada 'register' em 'resources/views/auth/register.blade.php'
-        }
-
-        public function showLoginForm()
-        {
-            return view('adm_dashboard.login'); // Certifique-se de que você tenha uma view chamada 'login' em 'resources/views/auth/login.blade.php'
-        }
-
-        public function logout(Request $request)
-        {
-            Auth::logout();
-            $request->session()->invalidate();
-            $request->session()->regenerateToken();
-            return redirect('/login')->with('success', 'Você saiu com sucesso!');
-        }
-
-        public function index()
-        {
-            return view('adm_dashboard.dashboard'); // Certifique-se de que esta view existe
-        }
+        return redirect('/perfil')->with('error', 'Usuário não encontrado.');
     }
+}

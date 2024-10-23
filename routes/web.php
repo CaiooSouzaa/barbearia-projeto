@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserAdmController;
 use App\Http\Controllers\UserClienteController;
 use Illuminate\Support\Facades\Route;
@@ -21,10 +20,6 @@ Route::get('/cart', function () {
 Route::get('/checkot', function () {
     return view('checkout');
 })->name('checkot');
-
-
-
-
 
 Route::get('/servico', function () {
     return view('servico');
@@ -55,22 +50,21 @@ Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente']
 Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlterar'])->name('tabelas_upd');
 
 //Parte administrador
-Route::get('/perfil',[UserAdmController::class, 'index_adm'])->name('perfil');
-Route::post('/perfil', [UserAdmController::class, 'IncluirAdm']);
-Route::post('/perfil/upd/{id}', [UserAdmController::class, 'ExecutarAlteracao'])->name('perfil.upd');
-Route::get('/perfil/exc/{id}', [UserAdmController::class, 'ExcluirAdm'])->name('perfil_ex');
-Route::get('/perfil/upd/{id}', [UserAdmController::class, 'BuscarAlterar'])->name('perfil_upd');
+Route::get('/perfil', [AuthController::class, 'index_adm'])->name('perfil');
+Route::post('/perfil/upd/{id}', [AuthController::class, 'ExecutarAlteracao'])->name('perfil.upd');
+Route::get('/perfil/exc/{id}', [AuthController::class, 'ExcluirAdm'])->name('perfil_ex');
+Route::get('/perfil/upd/{id}', [AuthController::class, 'BuscarAlterar'])->name('perfil_upd');
 
 //Parte de login
 // web.php
 // Rotas para login e registro
-Route::get('/login', function() {
+Route::get('/login', function () {
     return view('adm_dashboard.login');
 })->name('login');
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register'])->name('register');
-Route::get('/register', function() {
+Route::get('/register', function () {
     return view('adm_dashboard.register');
 });
 
@@ -81,5 +75,12 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middl
 // Rotas protegidas
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [AuthController::class, 'login'])->name('dashboard');
+
+    Route::get('/tabelas', [UserClienteController::class, 'index_cliente'])->name('tabelas');
+    Route::post('/tabelas', [UserClienteController::class, 'IncluirCliente']);
+    Route::post('/tabelas/upd/{id}', [UserClienteController::class, 'ExecutarAlteracao'])->name('tabelas.upd');
+    Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente'])->name('tabelas_ex');
+    Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlterar'])->name('tabelas_upd');
 });
+
 

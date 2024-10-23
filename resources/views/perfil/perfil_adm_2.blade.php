@@ -22,7 +22,7 @@
                             {{ $linhasAdm->name  }}
                         </h5>
                         <p class="mb-0 font-weight-normal text-sm">
-                            {{ $linhasAdm->id }}
+                            #{{ $linhasAdm->id }}
                         </p>
                     </div>
                 </div>
