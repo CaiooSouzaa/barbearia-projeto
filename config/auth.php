@@ -19,17 +19,13 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
-
-        'user' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
+   'guards' => [
+    'user' => [
+        'driver' => 'session',
+        'provider' => 'users',
     ],
+],
+
 
 
     /*

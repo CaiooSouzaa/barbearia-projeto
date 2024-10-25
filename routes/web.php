@@ -42,39 +42,40 @@ Route::get('/dashboard', function () {
     return view('adm_dashboard.dashboard');
 })->name('dashboard');
 
-//parte de criação, alteração e exclução de usuarios
-Route::get('/tabelas', [UserClienteController::class, 'index_cliente'])->name('tabelas');
-Route::post('/tabelas', [UserClienteController::class, 'IncluirCliente']);
-Route::post('/tabelas/upd/{id}', [UserClienteController::class, 'ExecutarAlteracao'])->name('tabelas.upd');
-Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente'])->name('tabelas_ex');
-Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlterar'])->name('tabelas_upd');
+
+
 
 //Parte administrador
-Route::get('/perfil', [AuthController::class, 'index_adm'])->name('perfil');
-Route::post('/perfil/upd/{id}', [AuthController::class, 'ExecutarAlteracao'])->name('perfil.upd');
-Route::get('/perfil/exc/{id}', [AuthController::class, 'ExcluirAdm'])->name('perfil_ex');
-Route::get('/perfil/upd/{id}', [AuthController::class, 'BuscarAlterar'])->name('perfil_upd');
-
-//Parte de login
-// web.php
-// Rotas para login e registro
-Route::get('/login', function () {
-    return view('adm_dashboard.login');
-})->name('login');
-
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/register', [AuthController::class, 'register'])->name('register');
-Route::get('/register', function () {
-    return view('adm_dashboard.register');
+Route::middleware('auth:user')->group(function () {
+    Route::get('/perfil', [AuthController::class, 'index_adm'])->name('perfil');
+    Route::post('/perfil/upd/{id}', [AuthController::class, 'ExecutarAlteracao'])->name('perfil.upd');
+    Route::get('/perfil/exc/{id}', [AuthController::class, 'ExcluirAdm'])->name('perfil_ex');
+    Route::get('/perfil/upd/{id}', [AuthController::class, 'BuscarAlterar'])->name('perfil_upd');
 });
 
-// Rota de logout
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
 
-// Rotas protegidas
-Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', [AuthController::class, 'login'])->name('dashboard');
+// Rotas de Login e Registro
+// Rotas de Login e Registro para usuários não autenticados
+Route::middleware('guest:user')->group(function () {
+    Route::get('/login', function () {
+        return view("adm_dashboard.login");
+    })->name('login');
+    
+    Route::post('/login', [AuthController::class, 'login']);
+    
+    Route::get('/register', function () {
+        return view("adm_dashboard.register");
+    })->name('register');
+    
+    Route::post('/register', [AuthController::class, 'register']);
+});
+
+// Rotas protegidas para usuários autenticados
+Route::middleware('auth:user')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('adm_dashboard.dashboard');
+    })->name('dashboard');
 
     Route::get('/tabelas', [UserClienteController::class, 'index_cliente'])->name('tabelas');
     Route::post('/tabelas', [UserClienteController::class, 'IncluirCliente']);
@@ -82,5 +83,3 @@ Route::middleware('auth')->group(function () {
     Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente'])->name('tabelas_ex');
     Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlterar'])->name('tabelas_upd');
 });
-
-

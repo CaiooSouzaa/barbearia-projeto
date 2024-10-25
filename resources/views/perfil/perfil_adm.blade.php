@@ -68,13 +68,16 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white " href="/pages/sign-in.html">
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">login</i>
-                        </div>
-                        <span class="nav-link-text ms-1">Sair</span>
+                    <form id="logout-form" action="" method="POST" style="display: none;">
+                      @csrf
+                    </form>
+                    <a class="nav-link text-white" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                      <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">login</i>
+                      </div>
+                      <span class="nav-link-text ms-1">Sair</span>
                     </a>
-                </li>
+                  </li>
             </ul>
         </div>
 
