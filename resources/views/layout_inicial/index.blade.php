@@ -51,7 +51,7 @@
                                     </li>
                                     <li><a href="{{ route('servico') }}">serviços</a>
                                     </li>
-                                    <li><a target="_blank" href="https://t.me/BarbershopAgendamento_Bot">Agendamento</a>
+                                    <li><a target="_blank" href="{{route('agendar')}}">Agendamento</a>
                                     </li>
                                     <li><a href="{{ route('login') }}">Login/Registrar</a>
                                     </li>
@@ -70,7 +70,7 @@
                         <div class="cell-sm-9 cell-md-8 cell-lg-7">
                             <h1>Aproveite nossos serviços de barbeiro</h1>
                             <p class="large">Estabeleça um novo visual incrível com nossos serviços de barbeiro.</p><a
-                                class="btn btn-style-1 btn-primary" href="https://t.me/BarbershopAgendamento_Bot">RESERVE AGORA</a>
+                                class="btn btn-style-1 btn-primary" href="{{route('agendar')}}">RESERVE AGORA</a>
                         </div>
                     </div>
                 </div>

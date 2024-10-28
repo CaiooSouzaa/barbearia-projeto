@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string("cpf_cliente");
             $table->string("numero_cliente");
             $table->boolean("ativo_cliente")->default(1);
+            $table->string("chat_id")->nullable(); // Coluna para armazenar o chat_id do Telegram
+            $table->date("data_agendamento")->nullable(); // Coluna para armazenar a data do agendamento
+            $table->time("horario_agendamento")->nullable(); // Coluna para armazenar o horário do agendamento
             $table->timestamps();
         });
     }

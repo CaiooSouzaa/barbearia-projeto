@@ -4,6 +4,8 @@ use App\Http\Controllers\UserAdmController;
 use App\Http\Controllers\UserClienteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Services\TelegramService;
+
 
 Route::get('/', function () {
     return view('layout_inicial.index');
@@ -61,13 +63,13 @@ Route::middleware('guest:user')->group(function () {
     Route::get('/login', function () {
         return view("adm_dashboard.login");
     })->name('login');
-    
+
     Route::post('/login', [AuthController::class, 'login']);
-    
+
     Route::get('/register', function () {
         return view("adm_dashboard.register");
     })->name('register');
-    
+
     Route::post('/register', [AuthController::class, 'register']);
 });
 
@@ -83,3 +85,14 @@ Route::middleware('auth:user')->group(function () {
     Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente'])->name('tabelas_ex');
     Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlterar'])->name('tabelas_upd');
 });
+
+
+Route::get('/testar-telegram', [UserClienteController::class, 'testarTelegram']);
+
+// routes/web.php
+
+Route::get('/agendar', [UserClienteController::class, 'showAgendar'])->name('agendar');
+Route::post('/agendar', [UserClienteController::class, 'criarAgendamento'])->name('criarAgendamento');
+
+
+

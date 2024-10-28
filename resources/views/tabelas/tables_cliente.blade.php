@@ -23,20 +23,13 @@
                             <table class="table table-bordered align-items-center mb-0">
                                 <thead class="text-center">
                                     <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID
-                                        </th>
-                                        <th
-                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                            NOME</th>
-                                        <th
-                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                            CPF</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            TELEFONE</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            AÇÕES</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NOME</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">CPF</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TELEFONE</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">DATA AGENDAMENTO</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">HORÁRIO AGENDAMENTO</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">AÇÕES</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -46,14 +39,14 @@
                                             <td>{{ $linhas->name_cliente }}</td>
                                             <td>{{ $linhas->cpf_cliente }}</td>
                                             <td class="text-center">{{ $linhas->numero_cliente }}</td>
+                                            <td class="text-center">{{ $linhas->data_agendamento }}</td> <!-- Nova coluna para data -->
+                                            <td class="text-center">{{ $linhas->horario_agendamento }}</td> <!-- Nova coluna para horário -->
                                             <td class="text-center">
                                                 <div class="d-flex justify-content-center">
-                                                    <button class="btn btn-danger me-2"
-                                                        onclick="openDeleteModal({{ $linhas->id }})">
+                                                    <button class="btn btn-danger me-2" onclick="openDeleteModal({{ $linhas->id }})">
                                                         <span class="fa fa-trash"></span>
                                                     </button>
-                                                    <a href="{{ route('tabelas_upd', ['id' => $linhas->id]) }}"
-                                                        class="btn btn-success" aria-label="Alterar">
+                                                    <a href="{{ route('tabelas_upd', ['id' => $linhas->id]) }}" class="btn btn-success" aria-label="Alterar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
                                                 </div>
@@ -61,6 +54,7 @@
                                         </tr>
                                     @endforeach
                                 </tbody>
+                                
                             </table>
                         </div>
                     </div>
@@ -117,7 +111,16 @@
                             <input type="text" class="form-control" name="numero_cliente" id="numero_cliente"
                                 placeholder="Digite o telefone" required>
                         </div>
-
+                        <div class="mb-3">
+                            <label for="data_agendamento" class="form-label">DATA</label>
+                            <input type="date" class="form-control" name="data_agendamento" id="data_agendamento"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="horario_agendamento" class="form-label">HORÁRIO</label>
+                            <input type="time" class="form-control" name="horario_agendamento" id="horario_agendamento"
+                                required>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
