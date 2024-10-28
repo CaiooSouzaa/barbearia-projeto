@@ -84,7 +84,9 @@ Route::middleware('auth:user')->group(function () {
     Route::post('/tabelas/upd/{id}', [UserClienteController::class, 'ExecutarAlteracao'])->name('tabelas.upd');
     Route::get('/tabelas/exc/{id}', [UserClienteController::class, 'ExcluirCliente'])->name('tabelas_ex');
     Route::get('/tabelas/upd/{id}', [UserClienteController::class, 'BuscarAlterar'])->name('tabelas_upd');
+    Route::get('/tabelas/{id}/edit', [UserClienteController::class, 'edit'])->name('tabelas.edit'); // Modificada aqui
 });
+
 
 
 Route::get('/testar-telegram', [UserClienteController::class, 'testarTelegram']);

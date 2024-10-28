@@ -39,14 +39,14 @@
                                             <td>{{ $linhas->name_cliente }}</td>
                                             <td>{{ $linhas->cpf_cliente }}</td>
                                             <td class="text-center">{{ $linhas->numero_cliente }}</td>
-                                            <td class="text-center">{{ $linhas->data_agendamento }}</td> <!-- Nova coluna para data -->
-                                            <td class="text-center">{{ $linhas->horario_agendamento }}</td> <!-- Nova coluna para horário -->
+                                            <td class="text-center">{{ $linhas->data_agendamento }}</td>
+                                            <td class="text-center">{{ $linhas->horario_agendamento }}</td>
                                             <td class="text-center">
                                                 <div class="d-flex justify-content-center">
                                                     <button class="btn btn-danger me-2" onclick="openDeleteModal({{ $linhas->id }})">
                                                         <span class="fa fa-trash"></span>
                                                     </button>
-                                                    <a href="{{ route('tabelas_upd', ['id' => $linhas->id]) }}" class="btn btn-success" aria-label="Alterar">
+                                                    <a href="{{ route('tabelas.upd', ['id' => $linhas->id]) }}" class="btn btn-success" aria-label="Alterar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
                                                 </div>

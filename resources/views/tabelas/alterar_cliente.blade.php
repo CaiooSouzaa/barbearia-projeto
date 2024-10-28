@@ -4,14 +4,11 @@
     <style>
         h1 {
             font-size: 32px;
-            /* Aumenta o tamanho do título */
             text-align: center;
-            /* Centraliza o título */
         }
 
         .breadcrumb-item {
             font-size: 18px;
-            /* Aumenta o tamanho das entradas do breadcrumb */
         }
 
         .card-header,
@@ -19,24 +16,18 @@
         label,
         input {
             font-size: 18px;
-            /* Aumenta o tamanho do texto geral */
         }
 
         .btn {
             font-size: 16px;
-            /* Aumenta o tamanho do texto dos botões */
         }
 
-        /* Estilizando o formulário para ficar centralizado */
         .form-floating {
             width: 100%;
             max-width: 500px;
-            /* Limita o tamanho do formulário */
             margin: 0 auto;
-            /* Centraliza horizontalmente */
         }
 
-        /* Estilizando a tabela */
         .table {
             margin-top: 20px;
             border: 1px solid #ddd;
@@ -53,33 +44,26 @@
 
         .form-control {
             transition: all 0.3s ease;
-            /* Animação ao focar no campo */
         }
 
         .form-control:focus {
             border-color: #5bc0de;
-            /* Cor do campo ao ser focado */
             box-shadow: 0 0 5px rgba(91, 192, 222, 0.5);
-            /* Efeito de sombra ao focar */
         }
 
-        /* Estilizando a animação de foco */
         .form-floating label {
             transition: all 0.3s ease;
         }
 
         .form-control:focus+label {
             color: #5bc0de;
-            /* Muda a cor do rótulo ao focar */
             transform: translateY(-18px) scale(0.85);
-            /* Muda a posição e tamanho do rótulo */
         }
 
         .card {
             margin-top: 20px;
         }
 
-        /* Centralizando o conteúdo da modal */
         .modal-content {
             padding: 20px;
         }
@@ -140,6 +124,36 @@
                                         <input type="text" class="form-control" name="numero_cliente" id="numero_cliente"
                                             placeholder="Digite o telefone" value="{{ $cliente->numero_cliente }}" />
                                     </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">
+                                    <label for="data_agendamento">DATA</label>
+                                </td>
+                                <td>
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control" name="data_agendamento"
+                                            id="data_agendamento" placeholder="Selecione a data"
+                                            value="{{ $cliente->data_agendamento }}" />
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">
+                                    <label for="horario_agendamento">HORÁRIO</label>
+                                </td>
+                                <td>
+                                    <select class="form-control" name="horario_agendamento" id="horario_agendamento">
+                                        <option value="">Selecione um horário</option>
+                                        @foreach ($horarios as $horario)
+                                            <option value="{{ $horario }}"
+                                                {{ $horario == $cliente->horario_agendamento ? 'selected' : '' }}>
+                                                {{ $horario }}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </td>
                             </tr>
                     </tbody>
